@@ -5,11 +5,11 @@ import react from "@astrojs/react";
 import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
-
 const locales = ['en', 'es', 'qu'];
 export default defineConfig({
-  integrations: [tailwind(), react(), 
+  integrations: [
+    tailwind(),
+    react(),
     sitemap({
       serialize: (entry) => {
         const path = new URL(entry.url).pathname;
@@ -22,9 +22,9 @@ export default defineConfig({
           })),
         };
       },
-    }),  
+    }),
   ],
-  site: "https://arxatec.net",
+  site: "https://arxatec.net/es/",
 
   i18n: {
     defaultLocale: "es",
