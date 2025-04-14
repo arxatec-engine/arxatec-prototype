@@ -1,16 +1,12 @@
 ---
 export const prerender = true;
 
-export function getStaticPaths() {
-  return [];
-}
-
 export function get() {
-  return {
+  return new Response(null, {
     status: 302,
     headers: {
-      Location: '/arxatec/es',
+      Location: '/es', // Redirige a /es al cargar la página principal
     },
-  };
+  });
 }
 ---
