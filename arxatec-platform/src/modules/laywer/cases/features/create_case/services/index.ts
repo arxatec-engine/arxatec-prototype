@@ -12,7 +12,7 @@ export const createCase = async (formData: FormData) => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      },
+      }
     );
     return response.data;
   } catch (error) {
@@ -23,10 +23,17 @@ export const createCase = async (formData: FormData) => {
 export const getAllCategories = async (): Promise<LegalCategoryModel[]> => {
   try {
     const response = await axios.get(
-      "http://localhost:3000/api/v1/cases/categories",
+      "http://localhost:3000/api/v1/cases/categories"
     );
+
+    if (!response.data || !response.data.data) {
+      throw new Error("No se recibieron datos de categorías del servidor");
+    }
+
     return response.data.data.map(toLegalCategoryModel);
-  } catch (error) {
-    throw new Error(error?.message || "Error al obtener las categorías");
+  } catch (error: unknown) {
+    throw new Error(
+      error?.toString() || "Error inesperado al obtener las categorías"
+    );
   }
 };

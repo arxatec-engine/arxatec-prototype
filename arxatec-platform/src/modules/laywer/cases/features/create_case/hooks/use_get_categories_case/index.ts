@@ -5,5 +5,8 @@ export const useGetCategoriesCase = () => {
   return useQuery({
     queryKey: ["categories_cases"],
     queryFn: getAllCategories,
+    retry: 1,
+    refetchOnWindowFocus: false,
+    staleTime: 5 * 60 * 1000,
   });
 };
