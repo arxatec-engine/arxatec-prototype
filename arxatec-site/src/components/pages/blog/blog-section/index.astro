@@ -1,0 +1,339 @@
+---
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+import CardBlog from "../../../shared/card-blog/index.astro";
+import ChevronDown from "astro-heroicons/outline/ChevronDown.astro";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
+
+const posts = [
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+  {
+    title: "Boost your conversion rate",
+    date: "2020-03-16",
+    category: "Marketing",
+    image:
+      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+    author: {
+      name: "Michael Foster",
+      role: "Co-Founder / CTO",
+      avatar:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde.",
+    link: "#",
+  },
+];
+---
+
+<div class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
+      <p
+        class="mt-2 max-w-lg text-pretty lg:text-4xl text-2xl font-semibold tracking-tight text-gray-950 text-left"
+      >
+        {translateLabels("blog.blog.title")}
+      </p>
+      <p
+        class="lg:mt-6 mt-2 max-w-2xl text-pretty text-left lg:text-base text-sm font-medium text-gray-600"
+      >
+        {translateLabels("blog.blog.description")}
+      </p>
+      <div class="mt-8 flex items-center justify-between flex-wrap gap-6">
+        <div class="flex items-center gap-2 flex-wrap">
+          <button
+            class="px-4 py-1.5 bg-gray-100 rounded-md font-medium text-gray-900 text-sm"
+          >
+            {translateLabels("blog.blog.category.1")}
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            {translateLabels("blog.blog.category.2")}
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            {translateLabels("blog.blog.category.3")}
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            {translateLabels("blog.blog.category.4")}
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            {translateLabels("blog.blog.category.5")}
+          </button>
+          <button
+            class="px-4 py-1.5 rounded-md font-medium text-gray-900 text-sm hover:bg-gray-100 transition-all"
+          >
+            {translateLabels("blog.blog.category.6")}
+          </button>
+        </div>
+        <div class="flex items-center gap-1 flex-wrap">
+          <p class="text-sm text-gray-900">
+            {translateLabels("blog.blog.order.title")}
+          </p>
+          <div class="mt-2 grid grid-cols-1">
+            <select
+              id="location"
+              name="location"
+              class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 lg:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 text-sm"
+            >
+              <option>
+                {translateLabels("blog.blog.order.recent")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.popular")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.recommended")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.relevance")}
+              </option>
+              <option>
+                {translateLabels("blog.blog.order.alphabetic")}
+              </option>
+            </select>
+
+            <ChevronDown
+              class="pointer-events-none col-start-1 row-start-1 mr-2 size-3 self-center justify-self-end text-gray-500 sm:size-3"
+              stroke-width={3}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mx-auto mt-2 grid max-w-2xl grid-cols-1 gap-x-2 gap-y-2 lg:gap-y-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+    >
+      {
+        posts.map((post) => (
+          <CardBlog
+            imageUrl={post.image}
+            date={post.date}
+            category={post.category}
+            title={post.title}
+            titleUrl={post.link}
+            description={post.description}
+            authorName={post.author.name}
+            authorImage={post.author.avatar}
+            authorRole={post.author.role}
+          />
+        ))
+      }
+    </div>
+
+    <nav
+      class="flex items-center justify-between bg-white px-4 py-3 sm:px-6 mt-2 rounded-md shadow-sm"
+      aria-label="Pagination"
+    >
+      <div class="hidden sm:block">
+        <p class="text-sm text-gray-700">
+          {translateLabels("blog.blog.pagination.show")}
+          <span class="font-medium">1</span>
+          {translateLabels("blog.blog.pagination.show.to")}
+          <span class="font-medium">10</span>
+          {translateLabels("blog.blog.pagination.show.of")}
+          <span class="font-medium">20</span>
+          {translateLabels("blog.blog.pagination.results")}
+        </p>
+      </div>
+      <div class="flex flex-1 justify-between sm:justify-end">
+        <a
+          href="#"
+          class="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-offset-0"
+        >
+          {translateLabels("blog.blog.pagination.back")}
+        </a>
+        <a
+          href="#"
+          class="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus-visible:outline-offset-0"
+        >
+          {translateLabels("blog.blog.pagination.next")}
+        </a>
+      </div>
+    </nav>
+  </div>
+</div>

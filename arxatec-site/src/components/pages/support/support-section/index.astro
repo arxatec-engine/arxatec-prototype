@@ -1,0 +1,132 @@
+---
+import { languageList, useTranslations } from "../../../../i18n/";
+import ContactForm from "./components/contact-form/index.jsx";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const props = {
+  form: {
+    name: {
+      label: translateLabels("support.contact.form.name.label"),
+      placeholder: translateLabels("support.contact.form.name.placeholder")
+    },
+    lastname: {
+      label: translateLabels("support.contact.form.lastname.label"),
+      placeholder: translateLabels("support.contact.form.lastname.placeholder")
+    },
+    email: {
+      label: translateLabels("support.contact.form.email.label"),
+      placeholder: translateLabels("support.contact.form.email.placeholder")
+    },
+    phone: {
+      label: translateLabels("support.contact.form.phone.label"),
+      placeholder: translateLabels("support.contact.form.phone.placeholder")
+    },
+    country: {
+      label: translateLabels("support.contact.form.country.label"),
+      placeholder: translateLabels("support.contact.form.country.placeholder")
+    },
+    subject: {
+      label: translateLabels("support.contact.form.subject.label"),
+      placeholder: translateLabels("support.contact.form.subject.placeholder")
+    },
+    message: {
+      label: translateLabels("support.contact.form.message.label"),
+      placeholder: translateLabels("support.contact.form.message.placeholder")
+    },
+    button: translateLabels("support.contact.form.button"),
+    warn: translateLabels("support.contact.form.message.legal")
+  }
+}
+---
+
+<div class="pb-24 md:pb-32 pt-6">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
+      <p
+        class="mt-2 max-w-lg text-pretty lg:text-4xl text-2xl font-semibold tracking-tight text-gray-950 text-left"
+      >
+        {translateLabels("support.contact.title")}
+      </p>
+      <p
+        class="lg:mt-6 mt-2 max-w-2xl text-pretty text-left lg:lg:text-base text-sm font-medium text-gray-600"
+      >
+        {translateLabels("support.contact.description")}
+      </p>
+    </div>
+    <div class="mt-2 grid lg:grid-cols-2 gap-2">
+      <div
+        class="overflow-hidden shadow-sm rounded-xl relative bg-white p-6 divide-y divide-gray-200"
+      >
+        <div class="pb-6">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
+            {translateLabels("support.contact.info.email.title")}
+          </h2>
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
+            {translateLabels("support.contact.info.email.description")}
+          </p>
+
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
+            >arxatec.developers@gmail.com</a
+          >
+        </div>
+        <div class="py-6">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
+            {translateLabels("support.contact.info.chat.title")}
+          </h2>
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
+            {translateLabels("support.contact.info.chat.description")}
+          </p>
+
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
+          >
+            {translateLabels("support.contact.info.chat.button")}
+          </a>
+        </div>
+        <div class="py-6">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
+            {translateLabels("support.contact.info.phone.title")}
+          </h2>
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
+            {translateLabels("support.contact.info.phone.description")}
+          </p>
+
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
+            >+51 967523180</a
+          >
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-2 text-sm lg:lg:text-base"
+            >+04 012112</a
+          >
+        </div>
+        <div class="py-6">
+          <h2 class="text-gray-900 font-bold lg:text-lg text-base">
+            {translateLabels("support.contact.info.location.title")}
+          </h2>
+          <p class="text-gray-600 mt-2 text-sm lg:lg:text-base">
+            {translateLabels("support.contact.info.location.description")}
+          </p>
+
+          <a
+            href=""
+            class="underline text-gray-900 font-semibold block mt-6 text-sm lg:lg:text-base"
+            >Torre Galena 234, Huancayo, Junín, Perú</a
+          >
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm p-6 flex flex-col">
+        <ContactForm props={props} client:load />
+      </div>
+    </div>
+  </div>
+</div>
