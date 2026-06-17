@@ -1,0 +1,30 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Header from ".";
+import { languageList, useTranslations } from "../../../../i18n/";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const headerProps = {
+  banner: translateLabels("shared.header.banner"),
+  nav: {
+    product: translateLabels("shared.header.option.product"),
+    productUrl: getRelativeLocaleUrl(currentLang, "/"),
+    plan: translateLabels("shared.header.option.plan"),
+    planUrl: getRelativeLocaleUrl(currentLang, "/pricing"),
+    blog: translateLabels("shared.header.option.blog"),
+    blogUrl: getRelativeLocaleUrl(currentLang, "/blog"),
+    support: translateLabels("shared.header.option.support"),
+    supportUrl: getRelativeLocaleUrl(currentLang, "/support"),
+  },
+  actions: {
+    login: translateLabels("shared.header.login"),
+    register: translateLabels("shared.header.register"),
+  },
+};
+---
+
+<Header headerProps={headerProps} client:load />

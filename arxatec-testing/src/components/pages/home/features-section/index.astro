@@ -1,0 +1,205 @@
+---
+import { languageList, useTranslations } from "../../../../i18n/";
+import { assets } from "../../../../utils";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
+
+---
+
+<div class="py-24 sm:py-32">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div class="bg-white rounded-xl shadow-sm overflow-hidden p-6">
+      <h2 class="lg:text-base/7 text-sm font-semibold text-blue-600 text-left">
+        {translateLabels("home.features.tag")}
+      </h2>
+      <p
+        class="mt-2 max-w-lg text-pretty lg:text-4xl text-2xl font-semibold tracking-tight text-gray-950 text-left"
+      >
+        {translateLabels("home.features.title")}
+      </p>
+      <p
+        class="lg:mt-6 mt-2 text-sm max-w-2xl text-pretty text-left lg:text-base font-medium text-gray-600"
+      >
+        {translateLabels("home.features.description")}
+      </p>
+    </div>
+    <div class="mt-2 grid grid-cols-1 gap-2 lg:grid-cols-6 lg:grid-rows-2">
+      <div class="relative lg:col-span-3">
+        <div
+          class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[1rem] lg:rounded-tl-[1rem]"
+        >
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(1rem+1px)] lg:rounded-tl-[calc(1rem+1px)]"
+        >
+          <div class="relative w-full h-[80]">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover object-left w-full"
+              src={assets.home.features.community}
+              alt=""
+            />
+          </div>
+          <div class="p-10 pt-4">
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.community.tag")}
+            </h3>
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+              {translateLabels("home.features.community.title")}
+            </p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+              {translateLabels("home.features.community.description")}
+            </p>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow-sm max-lg:rounded-t-[1rem] lg:rounded-tl-[1rem]"
+        >
+        </div>
+      </div>
+      <div class="relative lg:col-span-3">
+        <div
+          class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[1rem] w-full h-full"
+        >
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-tr-[calc(1rem+1px)]"
+        >
+          <div class="relative w-full h-80">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover object-left lg:object-right"
+              src={assets.home.features.cases}
+              alt=""
+            />
+          </div>
+          <div class="p-10 pt-4">
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.cases.tag")}
+            </h3>
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+              {translateLabels("home.features.cases.title")}
+            </p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+              {translateLabels("home.features.cases.description")}
+            </p>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow-sm lg:rounded-tr-[1rem]"
+        >
+        </div>
+      </div>
+      <div class="relative lg:col-span-2">
+        <div class="absolute inset-px rounded-lg bg-white lg:rounded-bl-[1rem]">
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-bl-[calc(1rem+1px)]"
+        >
+          <div class="relative h-80 w-full">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover object-left relative z-10 w-full"
+              src={assets.home.features.messages}
+              alt=""
+            />
+          </div>
+          <div class="p-10 pt-4">
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.messages.tag")}
+            </h3>
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+              {translateLabels("home.features.messages.title")}
+            </p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+              {translateLabels("home.features.messages.description")}
+            </p>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow-sm lg:rounded-bl-[1rem]"
+        >
+        </div>
+      </div>
+      <div class="relative lg:col-span-2">
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]"
+        >
+          <div class="h-80 relative w-full">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover w-full"
+              src={assets.home.features.calendar}
+              alt=""
+            />
+          </div>
+          <div class="p-10 pt-4">
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.calendar.tag")}
+            </h3>
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+              {translateLabels("home.features.calendar.title")}
+            </p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+              {translateLabels("home.features.calendar.description")}
+            </p>
+          </div>
+        </div>
+        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm">
+        </div>
+      </div>
+      <div class="relative lg:col-span-2">
+        <div
+          class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[1rem] lg:rounded-br-[1rem]"
+        >
+        </div>
+        <div
+          class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(1rem+1px)] lg:rounded-br-[calc(1rem+1px)]"
+        >
+          <div class="relative h-80 w-full">
+            <div
+              class="absolute h-16 w-full bg-gradient-to-t from-white to-transparent z-20 bottom-0"
+            >
+            </div>
+            <img
+              class="h-80 object-cover w-full"
+              src={assets.home.features.payments}
+              alt=""
+            />
+          </div>
+          <div class="p-10 pt-4">
+            <h3 class="text-sm/4 font-semibold text-blue-600">
+              {translateLabels("home.features.payments.tag")}
+            </h3>
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+              {translateLabels("home.features.payments.title")}
+            </p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600">
+              {translateLabels("home.features.payments.description")}
+            </p>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute inset-px rounded-lg shadow-sm max-lg:rounded-b-[1rem] lg:rounded-br-[1rem]"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
