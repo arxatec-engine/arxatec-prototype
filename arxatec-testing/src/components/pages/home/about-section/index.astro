@@ -1,0 +1,173 @@
+---
+import Play from "astro-heroicons/solid/Play.astro";
+import LockClosed from "astro-heroicons/solid/LockClosed.astro";
+import ChartBar from "astro-heroicons/solid/ChartBar.astro";
+import Users from "astro-heroicons/solid/Users.astro";
+import Bolt from "astro-heroicons/solid/Bolt.astro";
+import { languageList, useTranslations } from "../../../../i18n/";
+import { assets } from "../../../../utils";
+const currentLang = Astro.currentLocale || "es";
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList,
+);
+
+const highlights = [
+  {
+    icon: LockClosed,
+    title: translateLabels("home.about.highlights.securePlatform"),
+    description: translateLabels(
+      "home.about.highlights.securePlatform.description",
+    ),
+  },
+
+  {
+    icon: ChartBar,
+    title: translateLabels("home.about.highlights.smartDashboard"),
+    description: translateLabels(
+      "home.about.highlights.smartDashboard.description",
+    ),
+  },
+
+  {
+    icon: Users,
+    title: translateLabels("home.about.highlights.activeCommunity"),
+    description: translateLabels(
+      "home.about.highlights.activeCommunity.description",
+    ),
+  },
+
+  {
+    icon: Bolt,
+    title: translateLabels("home.about.highlights.instantSupport"),
+    description: translateLabels(
+      "home.about.highlights.instantSupport.description",
+    ),
+  },
+];
+---
+
+<div class="py-24 sm:py-32">
+  <div class="mx-auto px-6 max-w-7xl w-full lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-[44%_55%] gap-2">
+      <div
+        class="bg-white rounded-xl shadow-sm overflow-hidden p-6"
+        role="region"
+        aria-labelledby="sobre-nosotros-title"
+      >
+        <h2
+          id="sobre-nosotros-title"
+          class="lg:text-base/7 text-sm font-semibold text-blue-600 text-left white"
+        >
+          {translateLabels("home.about.tag")}
+        </h2>
+        <p
+          class="mt-2 max-w-lg text-pretty text-2xl lg:text-4xl font-semibold tracking-tight text-gray-950 text-left whitespace-pre-line"
+        >
+          {translateLabels("home.about.title")}
+        </p>
+        <p
+          class="mt-2 lg:mt-6 max-w-2xl text-pretty text-left lg:text-base font-medium text-gray-600 text-sm"
+        >
+          {translateLabels("home.about.description")}
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 w-full bg-white rounded-xl shadow-sm overflow-hidden p-6 gap-10"
+        role="list"
+      >
+        {
+          highlights.map((highlight) => (
+            <div role="listitem">
+              <span
+                class="bg-blue-100 block p-2 w-fit rounded-md"
+                aria-hidden="true"
+              >
+                <highlight.icon class="text-blue-600 lg:size-8 size-6" />
+              </span>
+              <h3 class="text-gray-900 font-semibold lg:text-lg text-base mt-4">
+                {highlight.title}
+              </h3>
+              <p class="text-gray-600 lg:text-base text-sm">
+                {highlight.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="overflow-hidden relative rounded-lg mt-2 h-[720px]">
+      <img
+        src={assets.home.about.video_banner}
+        alt="image"
+        class="w-full h-full object-cover relative z-[5]"
+        loading="lazy"
+      />
+
+      <div
+        class="w-full h-full absolute left-0 top-0 bg-black/30 z-10 flex items-center justify-center"
+      >
+        <button
+          class="bg-white/20 backdrop-blur-sm rounded-full flex p-6 items-center justify-center"
+          aria-label="button"
+          id="openModal"
+        >
+          <Play class="lg:size-10 size-7 text-white" />
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="w-screen top-0 left-0 h-screen bg-black/50 fixed z-50 flex items-center justify-center p-4"
+      style="display: none;"
+      id="modal"
+    >
+      <div
+        class="rounded-2xl mx-auto relative overflow-hidden w-full h-full max-w-[1400px] max-h-[800px]"
+      >
+        <iframe
+          class="w-full h-full"
+          id="iframe"
+          src="https://www.youtube.com/embed/sqJuBgWSqsc?autoplay=1&mute=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("modal");
+  const openModalButton = document.getElementById("openModal");
+  const closeModalButton = document.getElementById("close");
+  const frame = document.getElementById("iframe");
+
+  if (openModalButton != null && modal != null) {
+    openModalButton.addEventListener("click", () => {
+      //@ts-ignore
+      frame.src = "https://www.youtube.com/embed/sqJuBgWSqsc?autoplay=1&mute=1";
+      modal.style.display = "flex";
+    });
+  }
+
+  if (closeModalButton != null && modal != null && frame !== null) {
+    closeModalButton.addEventListener("click", () => {
+      //@ts-ignore
+      frame.src = "";
+      modal.style.display = "none";
+    });
+  }
+
+  if (modal !== null && frame !== null) {
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        //@ts-ignore
+        frame.src = "";
+        modal.style.display = "none";
+      }
+    });
+  }
+</script>
