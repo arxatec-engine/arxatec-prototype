@@ -1,0 +1,285 @@
+{
+  "translation": {
+    "common": {
+      "terms": "Terms & conditions",
+      "privacy": "Privacy policy"
+    },
+    "shared": {
+      "next": "Next",
+      "back": "Back",
+      "day_of_week": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      }
+    },
+    "lang": {
+      "es": "Spanish",
+      "en": "English",
+      "qu": "Quechua"
+    },
+    "components": {
+      "schedule": {
+        "add_button": "Add slot",
+        "to": "to"
+      }
+    },
+    "pages": {
+      "auth": {
+        "fields": {
+          "email": {
+            "label": "Email",
+            "placeholder": "Ex. email@domain.com"
+          },
+          "password": {
+            "label": "Password",
+            "placeholder": "Ex. AEcas2!3_aw*A"
+          },
+          "name": {
+            "label": "First name",
+            "placeholder": "Ex. John"
+          },
+          "lastname": {
+            "label": "Last name",
+            "placeholder": "Ex. Velasquez"
+          }
+        },
+        "social": {
+          "or": "Or continue with",
+          "google": "Google"
+        },
+        "login": {
+          "title": "Sign in to your account",
+          "text": "Sign in now and access your account to manage your cases efficiently, with advanced tools and all the information at your fingertips.",
+          "not_registered": "Not registered?",
+          "start": "Start free for 14 days",
+          "testimonial": {
+            "title": "We revolutionize the way lawyers manage their cases",
+            "text": "Arxatec offers a comprehensive platform that simplifies case management, improves communication with clients and optimizes legal processes. With advanced tools and an intuitive interface, Arxatec empowers lawyers to manage their practice effectively and accurately.",
+            "author": "Laura Martínez - Lawyer"
+          },
+          "form": {
+            "forget_password": "Forget your password?",
+            "remember_me": "Remember me",
+            "submit": "Sign in"
+          }
+        },
+        "register": {
+          "title": "Create an account",
+          "text": "Sign up now and start managing your cases more efficiently, with intuitive tools and advanced features.",
+          "not_registered": "Already have an account?",
+          "start": "Sign in",
+          "testimonial": {
+            "title": "We transform the way we understand and access legal services",
+            "text": "Everything in one place, designed to improve efficiency, reduce complexity and enhance the relationship between lawyers and clients. With Arxatec, we take legal practice to the next level, facilitating a modern, accessible and fully integrated legal experience.",
+            "author": "Rafael Aguirre - Lawyer"
+          },
+          "form": {
+            "submit": "Create an account"
+          }
+        },
+        "forgot_password": {
+          "title": "Forgot your password?",
+          "description": "Don't worry, we'll send you instructions to reset it.",
+          "email_placeholder": "Enter your email",
+          "submit": "Reset password",
+          "back_to_login": "Log back in",
+          "reset_password": {
+            "title": "Reset password",
+            "description": "Enter the code sent to your email.",
+            "code_input_label": "Digit",
+            "button_submit": "Continue",
+            "resend_text": "Didn't receive the email?",
+            "resend_action": "Click to resend"
+          },
+          "set_password": {
+            "title": "Set new password",
+            "description": "Must be at least 8 characters.",
+            "label_password": "Password",
+            "label_confirm_password": "Confirm Password",
+            "error_min_length": "Password must be at least 8 characters.",
+            "error_match": "Passwords do not match.",
+            "button_submit": "Reset Password"
+          },
+          "ready": {
+            "title": "All set!",
+            "description": "Your password has been reset. Would you like to set up Face ID as well?",
+            "button_face_id": "Set up Face ID",
+            "button_later": "I'll do it later"
+          }
+        },
+        "account_verification": {
+          "title": "Account Verification",
+          "description": "Enter the code sent to your email.",
+          "button_submit": "Continue",
+          "resend_text": "Didn't receive the email?",
+          "resend_action": "Click to resend",
+          "back_to_create_account": "Back to create account"
+        }
+      },
+      "onboarding": {
+        "button_back_choice_role": "Go back to choose role",
+        "general": {
+          "choice_role": {
+            "title": "Choose your role and access your space",
+            "description": "Select how you want to log in to enjoy a personalized experience made for you.",
+            "errors": {
+              "error_not_selected_role": "Select a role to continue. We want to offer you the best possible experience."
+            },
+            "questions": {
+              "question_1": {
+                "answer_1": {
+                  "label": "Client",
+                  "value": "Find the ideal lawyer for your case, access communities, and get the advice you need."
+                },
+                "answer_2": {
+                  "label": "Lawyer",
+                  "value": "Manage your clients' cases, connect with other professionals, and expand your legal network."
+                }
+              }
+            }
+          }
+        },
+        "customer": {
+          "client_profile": {
+            "title": "Tell us a little about yourself",
+            "description": "Upload a profile picture, indicate your location, profession, and age. This will help lawyers get to know you better and offer a more personalized service.",
+            "questions": {
+              "question_1": {
+                "label": "Profile picture",
+                "placeholder": "Upload a photo"
+              },
+              "question_2": {
+                "label": "Location",
+                "placeholder": "E.g. Mexico City, Mexico"
+              },
+              "question_3": {
+                "label": "Profession",
+                "placeholder": "E.g. Doctor"
+              },
+              "question_4": {
+                "label": "Age",
+                "answer_1": "Between 18 and 25 years",
+                "answer_2": "Between 26 and 35 years",
+                "answer_3": "Between 36 and 45 years",
+                "answer_4": "Between 46 and 55 years",
+                "answer_5": "Between 56 and 65 years",
+                "answer_6": "Over 65 years"
+              }
+            }
+          },
+          "legal_preferences": {
+            "title": "Detail your case",
+            "description": "Indicate your budget, urgency level, and preferred communication method. With this information, we can connect you with the lawyers that best suit your needs.",
+            "questions": {
+              "question_1": {
+                "label": "Ideal price range"
+              },
+              "question_2": {
+                "label": "Urgency",
+                "answer_1": "Immediate",
+                "answer_2": "In the coming weeks",
+                "answer_3": "Just exploring options"
+              },
+              "question_3": {
+                "label": "Preferred communication",
+                "answer_1": "Messaging",
+                "answer_2": "Video call",
+                "answer_3": "Email"
+              }
+            }
+          }
+        },
+        "lawyer": {
+          "lawyer_profile": {
+            "title": "Present your professional identity",
+            "description": "Add your biography, a profile picture, and your location so that clients can get to know you and build trust from the first contact.",
+            "questions": {
+              "question_1": {
+                "label": "Profile picture",
+                "placeholder": "Upload a photo"
+              },
+              "question_2": {
+                "label": "Biography",
+                "placeholder": "E.g. I am a lawyer specialized in labor law, with more than 10 years of experience in the field."
+              },
+              "question_3": {
+                "label": "Location",
+                "placeholder": "E.g. Mexico City, Mexico"
+              }
+            }
+          },
+          "professional_info": {
+            "title": "Highlight your experience and specialization",
+            "description": "Add your professional information so that clients can get to know you and build trust from the first contact.",
+            "questions": {
+              "question_1": {
+                "label": "Specialty",
+                "answer_1": "Labor lawyer",
+                "answer_2": "Civil lawyer",
+                "answer_3": "Criminal lawyer"
+              },
+              "question_2": {
+                "label": "Experience",
+                "answer_1": "1 year",
+                "answer_2": "2 years",
+                "answer_3": "More than 3 years",
+                "answer_4": "More than 5 years",
+                "answer_5": "More than 7 years",
+                "answer_6": "More than 10 years of experience"
+              },
+              "question_3": {
+                "label": "LinkedIn profile",
+                "placeholder": "E.g. https://www.linkedin.com/in/juanperez/"
+              }
+            }
+          },
+          "availability": {
+            "title": "Organize your availability",
+            "description": "Set your working hours flexibly to optimize your time and provide better service."
+          },
+          "preferences": {
+            "title": "Customize your experience",
+            "description": "Set your preferences and criteria to receive consultations aligned with your specialty and work style.",
+            "questions": {
+              "question_1": {
+                "label": "Preferred payment method",
+                "answer_1": "Bank transfer",
+                "answer_2": "Credit card",
+                "answer_3": "Debit card",
+                "answer_4": "Cryptocurrencies",
+                "answer_5": "Invoice payment",
+                "answer_6": "Automatic debit"
+              },
+              "question_2": {
+                "label": "Preferred communication method",
+                "answer_1": "Messaging",
+                "answer_2": "Video call",
+                "answer_3": "Phone call",
+                "answer_4": "Email"
+              },
+              "question_3": {
+                "label": "Your ideal client",
+                "answer_1": "Businesses",
+                "answer_2": "Specific cases",
+                "answer_3": "Individuals",
+                "answer_4": "Anyone"
+              },
+              "question_4": {
+                "label": "Do you charge an initial consultation?"
+              },
+              "question_5": {
+                "label": "Do you want to receive notifications?",
+                "description": "Receive notifications when a client sends you a message or whenever a client creates a new case."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
