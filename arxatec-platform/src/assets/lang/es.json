@@ -1,0 +1,285 @@
+{
+  "translation": {
+    "common": {
+      "terms": "Términos y condiciones",
+      "privacy": "Política de privacidad"
+    },
+    "shared": {
+      "next": "Continuar",
+      "back": "Atrás",
+      "day_of_week": {
+        "monday": "Lunes",
+        "tuesday": "Martes",
+        "wednesday": "Miércoles",
+        "thursday": "Jueves",
+        "friday": "Viernes",
+        "saturday": "Sábado",
+        "sunday": "Domingo"
+      }
+    },
+    "lang": {
+      "es": "Español",
+      "en": "Ingles",
+      "qu": "Quechua"
+    },
+    "components": {
+      "schedule": {
+        "add_button": "Agregar espacio",
+        "to": "a"
+      }
+    },
+    "pages": {
+      "auth": {
+        "fields": {
+          "email": {
+            "label": "Correo electrónico",
+            "placeholder": "Ej. email@domain.com"
+          },
+          "password": {
+            "label": "Contraseña",
+            "placeholder": "Ej. AEcas2!3_aw*A"
+          },
+          "name": {
+            "label": "Nombre",
+            "placeholder": "Ej. Juan"
+          },
+          "lastname": {
+            "label": "Apellido",
+            "placeholder": "Ej. Velasquez"
+          }
+        },
+        "social": {
+          "or": "O continua con",
+          "google": "Google"
+        },
+        "login": {
+          "title": "Ingresa a tu cuenta",
+          "text": "Inicia sesión ahora y accede a tu cuenta para gestionar tus casos de manera eficiente, con herramientas avanzadas y toda la información al alcance de tu mano.",
+          "not_registered": "¿No tienes una cuenta?",
+          "start": "Registrate",
+          "testimonial": {
+            "title": "Revolucionamos la forma en que los abogados gestionan sus casos",
+            "text": "Arxatec ofrece una plataforma integral que simplifica la administración de casos, mejora la comunicación con los clientes y optimiza los procesos legales. Con herramientas avanzadas y una interfaz intuitiva, Arxatec empodera a los abogados a gestionar su práctica con eficacia y precisión.",
+            "author": "Laura Martínez - Abogada"
+          },
+          "form": {
+            "forget_password": "¿Olvidaste tu contraseña?",
+            "remember_me": "Recuerdame",
+            "submit": "Iniciar sesión"
+          }
+        },
+        "register": {
+          "title": "Crea una cuenta",
+          "text": "Regístrate ahora y comienza a gestionar tus casos de manera más eficiente, con herramientas intuitivas y funcionalidades avanzadas.",
+          "not_registered": "¿Ya tienes una cuenta?",
+          "start": "Ingresar",
+          "testimonial": {
+            "title": "Transformamos la manera de entender y acceder a los servicios legales",
+            "text": "Todo en un único lugar, diseñado para mejorar la eficiencia, reducir la complejidad y potenciar la relación entre abogados y clientes. Con Arxatec, llevamos la práctica legal al siguiente nivel, facilitando una experiencia legal moderna, accesible y completamente integrada.",
+            "author": "Rafael Aguirre - Abogado"
+          },
+          "form": {
+            "submit": "Crear cuenta"
+          }
+        },
+        "forgot_password": {
+          "title": "¿Olvidaste tu contraseña?",
+          "description": "No te preocupes, te enviaremos instrucciones para restablecerla.",
+          "email_placeholder": "Ingresa tu correo electrónico",
+          "submit": "Restablecer contraseña",
+          "back_to_login": "Volver a iniciar sesión",
+          "reset_password": {
+            "title": "Restablecer contraseña",
+            "description": "Introduce el código enviado a tu correo.",
+            "code_input_label": "Dígito",
+            "button_submit": "Continuar",
+            "resend_text": "¿No recibiste el correo?",
+            "resend_action": "Haz clic para reenviar"
+          },
+          "set_password": {
+            "title": "Establecer nueva contraseña",
+            "description": "Debe tener al menos 8 caracteres.",
+            "label_password": "Contraseña",
+            "label_confirm_password": "Confirmar contraseña",
+            "error_min_length": "La contraseña debe tener al menos 8 caracteres.",
+            "error_match": "Las contraseñas no coinciden.",
+            "button_submit": "Restablecer contraseña"
+          },
+          "ready": {
+            "title": "¡Todo listo!",
+            "description": "Tu contraseña ha sido restablecida, vuelve a iniciar sesión para continuar.",
+            "button_face_id": "Configurar Face ID",
+            "button_later": "Lo haré más tarde"
+          }
+        },
+        "account_verification": {
+          "title": "Verificación de cuenta",
+          "description": "Introduce el código enviado a tu correo.",
+          "button_submit": "Continuar",
+          "resend_text": "¿No recibiste el correo?",
+          "resend_action": "Haz clic para reenviar",
+          "back_to_create_account": "Volver a crear cuenta"
+        }
+      },
+      "onboarding": {
+        "button_back_choice_role": "Volver a elegir rol",
+        "general": {
+          "choice_role": {
+            "title": "Elige tu rol y accede a tu espacio",
+            "description": "Selecciona cómo quieres ingresar para disfrutar de una experiencia personalizada hecha para ti.",
+            "errors": {
+              "error_not_selected_role": "Selecciona un rol para seguir. Queremos ofrecerte la mejor experiencia posible."
+            },
+            "questions": {
+              "question_1": {
+                "answer_1": {
+                  "label": "Cliente",
+                  "value": "Encuentra al abogado ideal para tu caso, accede a comunidades y obtén el asesoramiento que necesitas."
+                },
+                "answer_2": {
+                  "label": "Abogado",
+                  "value": "Gestiona los casos de tus clientes, conéctate con otros profesionales y amplía tu red legal."
+                }
+              }
+            }
+          }
+        },
+        "customer": {
+          "client_profile": {
+            "title": "Cuéntanos un poco sobre ti",
+            "description": "Sube una foto de perfil, indica tu ubicación, tu profesión y tu edad. Esto ayudará a los abogados a conocerte mejor y ofrecerte un servicio más personalizado.",
+            "questions": {
+              "question_1": {
+                "label": "Foto de perfil",
+                "placeholder": "Sube una foto"
+              },
+              "question_2": {
+                "label": "Ubicación",
+                "placeholder": "Ej. Ciudad de México, México"
+              },
+              "question_3": {
+                "label": "Profesión",
+                "placeholder": "Ej. Médico"
+              },
+              "question_4": {
+                "label": "Edad",
+                "answer_1": "Entre 18 y 25 años",
+                "answer_2": "Entre 26 y 35 años",
+                "answer_3": "Entre 36 y 45 años",
+                "answer_4": "Entre 46 y 55 años",
+                "answer_5": "Entre 56 y 65 años",
+                "answer_6": "Mayor de 65 años"
+              }
+            }
+          },
+          "legal_preferences": {
+            "title": "Detalla tu caso",
+            "description": "Indica tu presupuesto, el nivel de urgencia y cómo prefieres comunicarte. Con esta información, podremos conectarte con los abogados que mejor se adapten a tus necesidades.",
+            "questions": {
+              "question_1": {
+                "label": "Rango de precio ideal"
+              },
+              "question_2": {
+                "label": "Urgencia",
+                "answer_1": "Inmediato",
+                "answer_2": "En las próximas semanas",
+                "answer_3": "Solo explorando opciones"
+              },
+              "question_3": {
+                "label": "Comunicación preferida",
+                "answer_1": "Mensajeria",
+                "answer_2": "Videollamada",
+                "answer_3": "Correo electrónico"
+              }
+            }
+          }
+        },
+        "lawyer": {
+          "lawyer_profile": {
+            "title": "Presenta tu identidad profesional",
+            "description": "Agrega tu biografía, una foto de perfil y tu ubicación para que los clientes te conozcan y generes confianza desde el primer contacto.",
+            "questions": {
+              "question_1": {
+                "label": "Foto de perfil",
+                "placeholder": "Sube una foto"
+              },
+              "question_2": {
+                "label": "Biografía",
+                "placeholder": "Ej. Soy abogado especializado en derecho laboral, con más de 10 años de experiencia en la área."
+              },
+              "question_3": {
+                "label": "Ubicación",
+                "placeholder": "Ej. Ciudad de México, México"
+              }
+            }
+          },
+          "professional_info": {
+            "title": "Destaca tu experiencia y especialización",
+            "description": "Agrega tu información profesional para que los clientes te conozcan y generes confianza desde el primer contacto.",
+            "questions": {
+              "question_1": {
+                "label": "Especialidad",
+                "answer_1": "Abogado laboral",
+                "answer_2": "Abogado civil",
+                "answer_3": "Abogado penal"
+              },
+              "question_2": {
+                "label": "Experiencia",
+                "answer_1": "1 año",
+                "answer_2": "2 año",
+                "answer_3": "Más de 3 años",
+                "answer_4": "Más de 5 años",
+                "answer_5": "Más de 7 años",
+                "answer_6": "Más de 10 años de experiencia"
+              },
+              "question_3": {
+                "label": "Perfil de LinkedIn",
+                "placeholder": "Ej. https://www.linkedin.com/in/juanperez/"
+              }
+            }
+          },
+          "availability": {
+            "title": "Organiza tu disponibilidad",
+            "description": "Establece tus horarios de atención de manera flexible para optimizar tu tiempo y brindar un mejor servicio."
+          },
+          "preferences": {
+            "title": "Personaliza tu experiencia",
+            "description": "Configura tus preferencias y criterios para recibir consultas alineadas con tu especialidad y estilo de trabajo.",
+            "questions": {
+              "question_1": {
+                "label": "Metodo de pago favorito",
+                "answer_1": "Transferencia bancaria",
+                "answer_2": "Tarjeta de crédito",
+                "answer_3": "Tarjeta de débito",
+                "answer_4": "Criptomonedas",
+                "answer_5": "Contrafactura",
+                "answer_6": "Débito automático"
+              },
+              "question_2": {
+                "label": "Medio de comunicación preferido",
+                "answer_1": "Mensajeria",
+                "answer_2": "Videollamada",
+                "answer_3": "Llamada",
+                "answer_4": "Correo electrónico"
+              },
+              "question_3": {
+                "label": "Tu cliente ideal",
+                "answer_1": "Empresas",
+                "answer_2": "Casos específicos",
+                "answer_3": "Individuos",
+                "answer_4": "Cualquiera"
+              },
+              "question_4": {
+                "label": "¿Cobras consulta inicial?"
+              },
+              "question_5": {
+                "label": "¿Quieres recibir notificaciones?",
+                "description": "Recibe notificaciones cuando un cliente te envía un mensaje o cada vez que un cliente crea un nuevo caso."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

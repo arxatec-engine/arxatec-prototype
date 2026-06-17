@@ -1,0 +1,285 @@
+{
+  "translation": {
+    "common": {
+      "terms": "Kamachiykuna & ruraykuna",
+      "privacy": "Sapanchasqa willakuy"
+    },
+    "shared": {
+      "next": "Siguiyta",
+      "back": "Qayta",
+      "day_of_week": {
+        "monday": "Killachaw",
+        "tuesday": "Atichaw",
+        "wednesday": "Quyllurchaw",
+        "thursday": "Illapachaw",
+        "friday": "Ch'askachaw",
+        "saturday": "K'uychichaw",
+        "sunday": "Intichaw"
+      }
+    },
+    "lang": {
+      "es": "Español",
+      "en": "Ingles Simi",
+      "qu": "Runasimi"
+    },
+    "components": {
+      "schedule": {
+        "add_button": "Yapay pacha suti",
+        "to": "kayman"
+      }
+    },
+    "pages": {
+      "auth": {
+        "fields": {
+          "email": {
+            "label": "Ñawiwayku",
+            "placeholder": "Ñawpaqmi email@domain.com"
+          },
+          "password": {
+            "label": "Ñawpaq ch'usa",
+            "placeholder": "Ñawpaqmi AEcas2!3_aw*A"
+          },
+          "name": {
+            "label": "Ñawi",
+            "placeholder": "Ñawpaqmi Juan"
+          },
+          "lastname": {
+            "label": "Ñawi kanan",
+            "placeholder": "Ñawpaqmi Velasquez"
+          }
+        },
+        "social": {
+          "or": "Ñuqayku chaymanta",
+          "google": "Google-qan"
+        },
+        "login": {
+          "title": "Ñuqanchikpa ruwaspa",
+          "text": "Kunanpacha yaykuy chaymanta yupayniykiman yaykuy casoykikunata allinta kamachinaykipaq, ñawpaq yanapakuykunawan chaymanta llapa willakuykunawan makiykipi.",
+          "not_registered": "¿Manam kaykuykita niykunam kanchu?",
+          "start": "Ñawpaqmi 14 kutimanta ch'uchuy",
+          "testimonial": {
+            "title": "Abogadokuna imayna casonkuta kamachinku chayta revolucionarqayku",
+            "text": "Arxatec huk tukuypaq plataformata qun mayqinchus caso kamachiyta pisiyachin, cliente willayta allinchan chaymanta kamachiy ruwaykunata agilizar. Ñawpaqman puriq yanapakuykunawan chaymanta huk interfaz intuitiva kaqwan, Arxatec abogadokunaman atiyta qun ruwayninkuta allinta chaymanta chiqan kamachinankupaq. .",
+            "Author": "Laura Martínez - Abogada"
+          },
+          "form": {
+            "forget_password": "¿Ch'usa rikch'aykuchu?",
+            "remember_me": "Ñuqa ruwaspa",
+            "submit": "Kaykuy"
+          }
+        },
+        "register": {
+          "title": "Kaykuy ruwachiy",
+          "text": "Kunanpacha qillqakuy chaymanta aswan allinta casoykikunata kamachiyta qallariy, intuitivo yanapakuykunawan chaymanta ñawpaq ruwanakunawan.",
+          "not_registered": "¿Kaykuykita ruwaspa?",
+          "start": "Ñawpaq kaykuy churay",
+          "testimonial": {
+            "title": "Imaynatachus hamut'ayku chaymanta servicios legales nisqaman yaykuyniyku tikrayku",
+            "text": "Tukuy ima huk sitiollapi, ruwasqa allin ruway allin kananpaq, pisiyachinapaq complejidadta chaymanta aswan allinta ruwanapaq abogadokuna chaymanta clientekunapura. Arxatec kaqwan, ruway kamachiyta huk pataman apayku, huk moderna, chayay atiy chaymanta hunt'asqa tinkisqa experiencia jurídica kaqwan.",
+            "author": "Rafael Aguirre - Amachaq"
+          },
+          "form": {
+            "submit": "Kaykuy ruwachiy"
+          }
+        },
+        "forgot_password": {
+          "title": "¿Qonqarqankichu contraseñaykita?",
+          "description": "Ama llakikuychu, kamachiykunata apachisqaykiku chayta musuqmanta churanaykipaq.",
+          "email_placeholder": "E-mail nisqaykiman qillqay",
+          "submit": "Contraseñata kutichiy",
+          "back_to_login": "Yaykuyman kutiy",
+          "reset_password": {
+            "title": "Siminchayta kutichiy",
+            "description": "Qillqapak kodigo qarqusqayki emailman churay.",
+            "code_input_label": "Llimp’ina",
+            "button_submit": "Ñawpaqman",
+            "resend_text": "¿Manaraq emailta nispachu?",
+            "resend_action": "Click ch’ariyta qutuchiy"
+          },
+          "set_password": {
+            "title": "Musuq siminchayta churay",
+            "description": "Jukllaña 8 siq’i kapunan.",
+            "label_password": "Siminchay",
+            "label_confirm_password": "Siminchayta rikuchiy",
+            "error_min_length": "Siminchay jukllaña 8 siq’i kapunan.",
+            "error_match": "Siminchaykunawan mana huñunakunchu.",
+            "button_submit": "Siminchayta kutichiy"
+          },
+          "ready": {
+            "title": "Tukuyta ruwasqayki!",
+            "description": "Siminchayta kutichisqayki. ¿Face IDta ruwana munankichu?",
+            "button_face_id": "Face IDta churay",
+            "button_later": "Qhipan ruwasaq"
+          }
+        },
+        "account_verification": {
+          "title": "Cuenta Rikuchiy",
+          "description": "Qillqay huk yachachiy kamayoq willaykuykiman apachisqa.",
+          "button_submit": "Saraq",
+          "resend_text": "Manam willaykuyta chaskirqankichu?",
+          "resend_action": "T'uqrayta click churay willaykuyta qhipaq",
+          "back_to_create_account": "Kutimuy cuenta ruwarisqanman"
+        }
+      },
+      "onboarding": {
+        "button_back_choice_role": "Kutiy role akllaykipaq",
+        "general": {
+          "choice_role": {
+            "title": "Roleykita akllay huk pacha yaykuykipaq",
+            "description": "Imaynataq yaykuyta munanki akllay, qampa tukuykunaykipaq ruwanaypaq.",
+            "errors": {
+              "error_not_selected_role": "Role akllayta munaykiñachu. Aswan allin ruwanayta munanchik."
+            },
+            "questions": {
+              "question_1": {
+                "answer_1": {
+                  "label": "Cliente",
+                  "value": "Allin abogado tukuyta tariy, ayllukunaman yaykuy, asiraykipaq yanapakuqta tariy."
+                },
+                "answer_2": {
+                  "label": "Abogado",
+                  "value": "Qampaq kasukunaykita ruwapay, huk abogado kunawan tinkuy, tukuykunaykita huchuychay."
+                }
+              }
+            }
+          }
+        },
+        "customer": {
+          "client_profile": {
+            "title": "Qampaq willanakuy",
+            "description": "Tukuy ima ruway, rikch'aykipata qhaway, llaqtaykipata, ruwasaykipata, yuyaykipata. Kayqa abogado kunapaq allin kasunchikpaq yanapani.",
+            "questions": {
+              "question_1": {
+                "label": "Rikch'ay",
+                "placeholder": "Huk foto apkachiy"
+              },
+              "question_2": {
+                "label": "Llaqtay",
+                "placeholder": "Ñawpaqpi: Lima, Perú"
+              },
+              "question_3": {
+                "label": "Ruwasay",
+                "placeholder": "Ñawpaqpi: Hampikamayuq"
+              },
+              "question_4": {
+                "label": "Watay",
+                "answer_1": "18-25 watakunapi",
+                "answer_2": "26-35 watakunapi",
+                "answer_3": "36-45 watakunapi",
+                "answer_4": "46-55 watakunapi",
+                "answer_5": "56-65 watakunapi",
+                "answer_6": "65 watakunapas aswan"
+              }
+            }
+          },
+          "legal_preferences": {
+            "title": "Qampaq rikhuy",
+            "description": "Munayniykita qillqay, hinaptin ch'usaq rikhuyta, imaynataq rimayta munanki. Kay willakuykunawan, abogadokunata yanapanayta atinchik.",
+            "questions": {
+              "question_1": {
+                "label": "Munayniykipaq qillqa"
+              },
+              "question_2": {
+                "label": "Ch'usaq",
+                "answer_1": "Ñawpaqta",
+                "answer_2": "Aswan simanakunapi",
+                "answer_3": "Akaq ima rikhuyta munani"
+              },
+              "question_3": {
+                "label": "Munayniykipaq rimay",
+                "answer_1": "Willakuy",
+                "answer_2": "Rikch'ay rimay",
+                "answer_3": "Qillqakuy"
+              }
+            }
+          }
+        },
+        "lawyer": {
+          "lawyer_profile": {
+            "title": "Qhawariy profesiona kayki",
+            "description": "Yapay biografía-yki, ima rikuq foto nisqayki, ubicación-yki, hina clientes-qa qhawakusunki, willakusunchispa, y confianza ruwaykusunmi ñawpaq ñawpaqta.",
+            "questions": {
+              "question_1": {
+                "label": "Rikuq foto",
+                "placeholder": "Foto uray"
+              },
+              "question_2": {
+                "label": "Biografía",
+                "placeholder": "Kay. Ñuqaqa abogado kani, derecho laboralpi llamk'ayta yachaykuspa, 10 watakuna ruwaspa."
+              },
+              "question_3": {
+                "label": "Ubicación",
+                "placeholder": "Kay. México Llaqta, México"
+              }
+            }
+          },
+          "professional_info": {
+            "title": "Riqsichiy llamk'ayki y yachayki",
+            "description": "Yapay profesiona información-yki, hina clientes-qa qhawakusunki y willakusunchispa, confianza ruwaykusunmi ñawpaqta.",
+            "questions": {
+              "question_1": {
+                "label": "Especialidad",
+                "answer_1": "Abogado laboral",
+                "answer_2": "Abogado civil",
+                "answer_3": "Abogado penal"
+              },
+              "question_2": {
+                "label": "Yachay",
+                "answer_1": "1 wata",
+                "answer_2": "2 wata",
+                "answer_3": "3 watakunamanta aswan",
+                "answer_4": "5 watakunamanta aswan",
+                "answer_5": "7 watakunamanta aswan",
+                "answer_6": "10 watakunamanta aswan llamk'aypi"
+              },
+              "question_3": {
+                "label": "LinkedIn perfil",
+                "placeholder": "Kay. https://www.linkedin.com/in/juanperez/"
+              }
+            }
+          },
+          "availability": {
+            "title": "Ruwariy disponible tukuy",
+            "description": "Sumaqta waktay llamk'ay horas-yki, mana pisi mana achka, hinataq yachachiy y aswan allin servicio ruway."
+          },
+          "preferences": {
+            "title": "Kustumasun experiencia-yki",
+            "description": "Configuray preferencia-yki y yachay yachaypi kikinpa kaq, hina consulta-ta yaykusunki tukuy ruwaykunaykipaq.",
+            "questions": {
+              "question_1": {
+                "label": "Aswan allin qullqi kutichiq",
+                "answer_1": "Banco traspaso",
+                "answer_2": "Tarjeta de crédito",
+                "answer_3": "Tarjeta de débito",
+                "answer_4": "Criptomonedas",
+                "answer_5": "Contrafactura",
+                "answer_6": "Débito automático"
+              },
+              "question_2": {
+                "label": "Aswan allin willay kasqa",
+                "answer_1": "Willaykuna",
+                "answer_2": "Videollamada",
+                "answer_3": "Llamada",
+                "answer_4": "Correo electrónico"
+              },
+              "question_3": {
+                "label": "Allin kasqa cliente-yki",
+                "answer_1": "Empresa-kuna",
+                "answer_2": "Sumaq rikchaq yachay",
+                "answer_3": "Sapa runa",
+                "answer_4": "Mayqinpis"
+              },
+              "question_4": {
+                "label": "¿Qullqita churanki ñawpaqta willanakuy?"
+              },
+              "question_5": {
+                "label": "¿Notifación-ta munanki?",
+                "description": "Notifación-ta chaskinki mana clientes willayta apachispa o clientes huk musuq asuntu-ta ruwaykuspa."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
