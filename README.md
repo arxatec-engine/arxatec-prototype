@@ -1,0 +1,1 @@
+# Arxatec — Código original (archivado)
