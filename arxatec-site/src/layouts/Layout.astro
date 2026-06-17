@@ -1,0 +1,87 @@
+---
+import "@fontsource-variable/dm-sans";
+import Chatbot from "../components/shared/chatbot/index.astro";
+import ModalSuscribe from "../components/shared/modal-suscribe/index.astro";
+
+const currentLang = Astro.currentLocale || "es";
+const {
+  title = "",
+  description = "",
+  keywords = "",
+  canonical = Astro.url.pathname,
+  image = "",
+  type = "",
+  robots = "",
+  structuredData
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={currentLang} dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content={robots} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content={currentLang} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    {structuredData && <script type="application/ld+json">{JSON.stringify(structuredData)}</script>}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <meta name="generator" content={Astro.generator} />
+  </head>
+
+  <body class="text-gray-900 font-sans bg-slate-100">
+    <slot />
+    <Chatbot  />
+    <ModalSuscribe  />
+  </body>
+</html>
+
+<style>
+  *, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+</style>
+
+<script>
+  document.addEventListener("click", function (event) {
+    const isModalActive = localStorage.getItem("IS_MODAL_ACTIVE");
+    // @ts-ignore
+    if(event.target.classList.contains("modal-suscribe-button")){
+      if (typeof isModalActive === "string") {
+        if(isModalActive === "true"){
+          localStorage.setItem("IS_MODAL_ACTIVE", "false");
+        }else{
+          localStorage.setItem("IS_MODAL_ACTIVE", "true");
+        }
+      }else{
+        localStorage.setItem("IS_MODAL_ACTIVE", "true");
+      }
+    }
+  });
+</script>
