@@ -1,7 +1,7 @@
  <!-- Sección de Boletín Informativo Comienza -->
  <section class="newslatter-section">
             <div class="container">
-                <div class="newslatter-inner set-bg" data-setbg="img/3.jpg">
+                <div class="newslatter-inner set-bg" data-setbg="img/3.webp">
                     <div class="ni-text">
                         <h3>Suscríbete al Boletín</h3>
                         <p>Suscríbete a nuestro boletín y mantente al día con las noticias legales</p>

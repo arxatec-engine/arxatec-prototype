@@ -3,7 +3,7 @@
 ?>
 
     <!-- Hero Section Begin -->
-    <section class="hero-section set-bg" data-setbg="img/5.png">
+    <section class="hero-section set-bg" data-setbg="img/5.webp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
@@ -72,7 +72,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="ha-pic">
-                            <img src="img/about.jpg" alt="Sobre Arxatec">
+                            <img src="img/about.webp" alt="Sobre Arxatec">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -209,7 +209,7 @@
 
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="../projects/shared/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>

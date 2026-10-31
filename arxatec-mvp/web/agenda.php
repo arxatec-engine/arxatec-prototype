@@ -51,7 +51,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-1.jpg" alt="">
+                                                    <img src="img/schedule/schedule-1.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -79,7 +79,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-2.jpg" alt="">
+                                                    <img src="img/schedule/schedule-2.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -107,7 +107,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-3.jpg" alt="">
+                                                    <img src="img/schedule/schedule-3.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -135,7 +135,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-4.jpg" alt="">
+                                                    <img src="img/schedule/schedule-4.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -165,7 +165,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-1.jpg" alt="">
+                                                    <img src="img/schedule/schedule-1.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -193,7 +193,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-2.jpg" alt="">
+                                                    <img src="img/schedule/schedule-2.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -221,7 +221,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-3.jpg" alt="">
+                                                    <img src="img/schedule/schedule-3.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -249,7 +249,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-4.jpg" alt="">
+                                                    <img src="img/schedule/schedule-4.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -279,7 +279,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-1.jpg" alt="">
+                                                    <img src="img/schedule/schedule-1.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -307,7 +307,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-2.jpg" alt="">
+                                                    <img src="img/schedule/schedule-2.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -335,7 +335,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-3.jpg" alt="">
+                                                    <img src="img/schedule/schedule-3.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -363,7 +363,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-4.jpg" alt="">
+                                                    <img src="img/schedule/schedule-4.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -393,7 +393,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-1.jpg" alt="">
+                                                    <img src="img/schedule/schedule-1.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -421,7 +421,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-2.jpg" alt="">
+                                                    <img src="img/schedule/schedule-2.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -449,7 +449,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-3.jpg" alt="">
+                                                    <img src="img/schedule/schedule-3.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -477,7 +477,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-4.jpg" alt="">
+                                                    <img src="img/schedule/schedule-4.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -507,7 +507,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-1.jpg" alt="">
+                                                    <img src="img/schedule/schedule-1.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -535,7 +535,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-2.jpg" alt="">
+                                                    <img src="img/schedule/schedule-2.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -563,7 +563,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-3.jpg" alt="">
+                                                    <img src="img/schedule/schedule-3.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
@@ -591,7 +591,7 @@
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="sc-pic">
-                                                    <img src="img/schedule/schedule-4.jpg" alt="">
+                                                    <img src="img/schedule/schedule-4.webp" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">

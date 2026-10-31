@@ -20,7 +20,7 @@
                                             <img src="img/quote.png" alt="">
                                         </div>
                                         <div class="ta-pic">
-                                            <img src="img/testimonial/testimonial-1.jpg" alt="">
+                                            <img src="img/testimonial/testimonial-1.webp" alt="">
                                         </div>
                                         <div class="ta-text">
                                             <h5>Claudia Torres</h5>
@@ -41,7 +41,7 @@
                                             <img src="img/quote.png" alt="">
                                         </div>
                                         <div class="ta-pic">
-                                            <img src="img/testimonial/testimonial-2.jpg" alt="">
+                                            <img src="img/testimonial/testimonial-2.webp" alt="">
                                         </div>
                                         <div class="ta-text">
                                             <h5>Carlos Mejía</h5>
@@ -59,7 +59,7 @@
                                             <img src="img/quote.png" alt="">
                                         </div>
                                         <div class="ta-pic">
-                                            <img src="img/testimonial-3.jpg" alt="">
+                                            <img src="img/testimonial-3.webp" alt="">
                                         </div>
                                         <div class="ta-text">
                                             <h5>Lucía Fernández</h5>

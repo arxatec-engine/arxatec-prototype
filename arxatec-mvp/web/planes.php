@@ -1,5 +1,5 @@
 <!-- Sección de Precios Comienza -->
-<section class="pricing-section set-bg spad" data-setbg="img/pricing-bg.jpg">
+<section class="pricing-section set-bg spad" data-setbg="img/pricing-bg.webp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

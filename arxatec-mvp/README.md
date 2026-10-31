@@ -14,11 +14,11 @@
 
 <br>
 
-![Login page of the live demo, with the demo panel open](docs/screenshots/login.png)
+![Login page of the live demo, with the demo panel open](docs/screenshots/login.webp)
 
 ## 📖 The story
 
-ARXATEC started in 2024 as this MVP: a platform where people could get legal advice online, book a video consultation with a lawyer or ask a question by message. The code is preserved exactly as it was written, as a record of the project's first steps.
+ARXATEC started in 2024 as this MVP: a platform where people could get legal advice online, book a video consultation with a lawyer or ask a question by message. It is preserved as a record of the project's first steps, with assets optimized to reduce its size.
 
 ## ✨ What it does
 
@@ -36,12 +36,12 @@ ARXATEC started in 2024 as this MVP: a platform where people could get legal adv
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/screenshots/public-website.png" alt="Public website"><p align="center"><sub>Public website</sub></p></td>
-    <td width="50%"><img src="docs/screenshots/admin-dashboard.png" alt="Admin dashboard"><p align="center"><sub>Admin dashboard</sub></p></td>
+    <td width="50%"><img src="docs/screenshots/public-website.webp" alt="Public website"><p align="center"><sub>Public website</sub></p></td>
+    <td width="50%"><img src="docs/screenshots/admin-dashboard.webp" alt="Admin dashboard"><p align="center"><sub>Admin dashboard</sub></p></td>
   </tr>
   <tr>
-    <td width="50%"><img src="docs/screenshots/client-video-calls.png" alt="Client video consultations"><p align="center"><sub>Client · video consultations</sub></p></td>
-    <td width="50%"><img src="docs/screenshots/client-messages.png" alt="Client message consultations"><p align="center"><sub>Client · message consultations</sub></p></td>
+    <td width="50%"><img src="docs/screenshots/client-video-calls.webp" alt="Client video consultations"><p align="center"><sub>Client · video consultations</sub></p></td>
+    <td width="50%"><img src="docs/screenshots/client-messages.webp" alt="Client message consultations"><p align="center"><sub>Client · message consultations</sub></p></td>
   </tr>
 </table>
 
@@ -86,7 +86,7 @@ arxatec-mvp/
 │   └── shared/    Shared assets and profile images
 ├── web/           Public website
 ├── database/      mysqli connection and schema with seed data (sql.txt)
-├── demo/          Static live demo: captured pages, SQLite runtime and build scripts
+├── demo/          Static live demo: compressed page captures, SQLite runtime and build scripts
 └── docker/        PHP + MariaDB environment used to capture the demo
 ```
 
@@ -99,6 +99,19 @@ arxatec-mvp/
 <br>
 
 Only needed after changing the PHP views. Requires Docker and Node.js 20+.
+The captured HTML is stored in `demo/pages.json.br`; the build reads it directly
+and `capture.mjs` regenerates it when the PHP views change. The bundled SQLite
+files are also stored compressed and restored automatically when the demo is built.
+The build creates `demo/dist/`, which can be deleted after previewing.
+
+The shared template's editable source files are stored in
+`projects/shared/template-sources.tar.gz`. To edit them, extract the archive from
+`projects/shared/` with `tar -xzf template-sources.tar.gz`; the application uses
+the compiled assets in `assets/vendor/`.
+
+The included Boxicons, Font Awesome and Elegant Icons fonts and stylesheets
+contain only icons used by the current interface. Restore the full upstream
+font and stylesheet when adding other icons from that library.
 
 ```bash
 # 1. Capture the pages from a temporary copy of the app with a fresh database

@@ -8,6 +8,7 @@ projects/shared/dist/** linguist-vendored
 projects/shared/fonts/** linguist-vendored
 projects/shared/js/** linguist-vendored
 projects/shared/html/** linguist-vendored
+projects/shared/template-sources.tar.gz linguist-vendored
 projects/shared/assets/vendor/** linguist-vendored
 web/css/*.min.css linguist-vendored
 web/js/*.min.js linguist-vendored
@@ -15,3 +16,4 @@ web/js/jquery.slicknav.js linguist-vendored
 demo/runtime/vendor/** linguist-vendored
 
 demo/pages/** linguist-generated
+demo/pages.json.br linguist-generated

@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="latest-item set-bg large-item" data-setbg="img/1.jpg">
+                <div class="latest-item set-bg large-item" data-setbg="img/1.webp">
                     <div class="li-tag">Derecho Corporativo</div>
                     <div class="li-text">
                         <h4><a href="#">Mejora la estructura legal de tu empresa y optimiza tus contratos</a></h4>
@@ -20,14 +20,14 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="latest-item set-bg" data-setbg="img/2.jpg">
+                <div class="latest-item set-bg" data-setbg="img/2.webp">
                     <div class="li-tag">Derecho Laboral</div>
                     <div class="li-text">
                         <h5><a href="#">Conoce tus derechos laborales y cómo protegerlos en tiempos de crisis</a></h5>
                         <span><i class="fa fa-clock-o"></i> 8 de Septiembre, 2024</span>
                     </div>
                 </div>
-                <div class="latest-item set-bg" data-setbg="img/3.jpg">
+                <div class="latest-item set-bg" data-setbg="img/3.webp">
                     <div class="li-tag">Propiedad Intelectual</div>
                     <div class="li-text">
                         <h5><a href="#">¿Cómo registrar tu marca y proteger tus creaciones en línea?</a></h5>

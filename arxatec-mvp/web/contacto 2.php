@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="cc-text set-bg" data-setbg="img/contact-content-bg.jpg">
+                    <div class="cc-text set-bg" data-setbg="img/contact-content-bg.webp">
                         <div class="row">
                             <div class="col-lg-8 offset-lg-4">
                                 <div class="section-title">

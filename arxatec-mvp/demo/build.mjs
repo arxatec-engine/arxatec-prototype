@@ -1,7 +1,7 @@
 // Builds the static demo into demo/dist.
 //
-// - Copies the original assets (CSS, JS, images, fonts) untouched.
-// - Takes the pages captured from the PHP app (demo/pages) and the static
+// - Copies the optimized assets (CSS, JS, images, fonts).
+// - Takes the pages captured from the PHP app (demo/pages.json.br) and the static
 //   pages of the public website, rewrites their links from .php to .html and
 //   loads the demo runtime first in <head>.
 //
@@ -10,11 +10,12 @@
 import { access, cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join, posix, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { brotliDecompressSync } from 'node:zlib';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, '..');
 const DIST = join(HERE, 'dist');
-const PAGES = join(HERE, 'pages');
+const PAGES = join(HERE, 'pages.json.br');
 
 const ASSETS = [
   'auth/assets',
@@ -35,7 +36,8 @@ async function listFiles(dir) {
     .map((entry) => relative(dir, join(entry.parentPath, entry.name)).split(sep).join('/'));
 }
 
-const capturedPages = (await listFiles(PAGES)).filter((file) => file.endsWith('.html'));
+const captured = JSON.parse(brotliDecompressSync(await readFile(PAGES)).toString('utf8'));
+const capturedPages = Object.keys(captured).filter((file) => file.endsWith('.html'));
 
 // Pages each panel has, to send unknown ?page= values to the dashboard like the PHP router does.
 const panelPages = {};
@@ -88,8 +90,16 @@ for (const asset of ASSETS) {
 }
 await cp(join(HERE, 'runtime'), join(DIST, '_demo'), { recursive: true });
 
+// Keep the bundled SQLite files compressed in the source tree. The published
+// demo receives the normal files expected by sql.js and a static web server.
+for (const file of ['sql-wasm.js', 'sql-wasm.wasm']) {
+  const target = join(DIST, '_demo/vendor/sql.js', file);
+  await writeFile(target, brotliDecompressSync(await readFile(`${target}.br`)));
+  await rm(`${target}.br`);
+}
+
 for (const file of capturedPages) {
-  await writePage(file, transform(await readFile(join(PAGES, file), 'utf8'), file));
+  await writePage(file, transform(captured[file], file));
 }
 
 // The public website's static pages are served as they are in the repository.

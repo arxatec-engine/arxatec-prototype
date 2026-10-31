@@ -5,12 +5,14 @@
 // from a fresh database so no local test data is saved (see README.md).
 // Usage: node demo/capture.mjs [baseUrl]   (default http://localhost:8090)
 
-import { mkdir, writeFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { brotliCompressSync, constants } from 'node:zlib';
 
 const BASE = (process.argv[2] ?? 'http://localhost:8090').replace(/\/$/, '');
-const OUT = join(dirname(fileURLToPath(import.meta.url)), 'pages');
+const OUT = join(dirname(fileURLToPath(import.meta.url)), 'pages.json.br');
+const captured = {};
 
 const PUBLIC_PAGES = {
   'auth/index.html': '/auth/',
@@ -62,9 +64,7 @@ async function login(email, password) {
 }
 
 async function save(file, html) {
-  const target = join(OUT, file);
-  await mkdir(dirname(target), { recursive: true });
-  await writeFile(target, html, 'utf8');
+  captured[file] = html;
   console.log('captured', file);
 }
 
@@ -79,3 +79,10 @@ for (const [panel, { login: [email, password], pages }] of Object.entries(PANELS
     await save(`projects/${panel}/${page}.html`, await get(`/projects/${panel}/index.php?page=${page}`, cookie));
   }
 }
+
+// Captured HTML repeats the same panel layout across pages. Store it together
+// so Brotli can share that repeated content while keeping the demo self-contained.
+await writeFile(OUT, brotliCompressSync(Buffer.from(JSON.stringify(captured)), {
+  params: { [constants.BROTLI_PARAM_QUALITY]: 11 },
+}));
+console.log(`Saved ${Object.keys(captured).length} pages to ${OUT}`);
