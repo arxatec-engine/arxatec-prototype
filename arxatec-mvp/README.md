@@ -6,7 +6,7 @@
 
 **Online legal advice: the 2024 MVP where ARXATEC started.**
 
-[![Open the live demo](https://img.shields.io/badge/Live_demo-Open-3f3ab8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://arxatec-engine.github.io/arxatec-mvp/)
+[![Run the browser demo](https://img.shields.io/badge/Browser_demo-Run_locally-3f3ab8?style=for-the-badge&logo=googlechrome&logoColor=white)](#-browser-based-demo)
 
 ![PHP 8](https://img.shields.io/badge/PHP-8-777BB4?logo=php&logoColor=white) ![MySQL / MariaDB](https://img.shields.io/badge/MySQL-MariaDB-003545?logo=mariadb&logoColor=white) ![Bootstrap 5](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black) ![SQLite demo](https://img.shields.io/badge/Demo-SQLite_in_the_browser-003B57?logo=sqlite&logoColor=white) ![Archived MVP](https://img.shields.io/badge/Status-Archived_MVP-8a8f98) [![MIT License](https://img.shields.io/badge/License-MIT-2ea44f)](LICENSE)
 
@@ -14,11 +14,13 @@
 
 <br>
 
-![Login page of the live demo, with the demo panel open](docs/screenshots/login.webp)
+![Login page of the browser demo, with the demo panel open](docs/screenshots/login.webp)
 
 ## 📖 The story
 
 ARXATEC started in 2024 as this MVP: a platform where people could get legal advice online, book a video consultation with a lawyer or ask a question by message. It is preserved as a record of the project's first steps, with assets optimized to reduce its size.
+
+Yemis Paredez designed and built this first version. Later came an institute project presented at SENATI in June 2025, followed by another rebuild beginning in October. Read the [full history and meet the wider team](../README.md#-the-story). This MVP is an archived prototype, not the current Arxatec platform.
 
 ## ✨ What it does
 
@@ -45,9 +47,18 @@ ARXATEC started in 2024 as this MVP: a platform where people could get legal adv
   </tr>
 </table>
 
-## 🚀 Live demo
+## 🚀 Browser-based demo
 
-The demo runs entirely in the browser, with no server and no shared database.
+The demo's application logic runs in the browser, with no backend or shared database. A local static server delivers its files.
+
+To build and serve it locally, use Node.js 20 or newer and run these commands from `arxatec-mvp/`:
+
+```bash
+node demo/build.mjs
+node demo/serve.mjs
+```
+
+Open [http://localhost:8095](http://localhost:8095). The build recreates `demo/dist/`. The previously advertised GitHub Pages address returned 404 when checked, so use the local demo in this archive.
 
 | | |
 | :---: | --- |
@@ -71,6 +82,7 @@ The demo runs entirely in the browser, with no server and no shared database.
 - The client's status and history pages include sample consultations so they are not empty.
 - *Create plan* and the admin's *personal data* form save their changes; in the original app their handlers were never finished.
 - Forms that post to scripts missing from the original app, such as the support form, show a notice instead of an error page.
+- The build reports one missing image referenced by the original public site: `web/img/model 2.png`.
 
 </details>
 
@@ -86,7 +98,7 @@ arxatec-mvp/
 │   └── shared/    Shared assets and profile images
 ├── web/           Public website
 ├── database/      mysqli connection and schema with seed data (sql.txt)
-├── demo/          Static live demo: compressed page captures, SQLite runtime and build scripts
+├── demo/          Static browser demo: compressed page captures, SQLite runtime and build scripts
 └── docker/        PHP + MariaDB environment used to capture the demo
 ```
 
@@ -126,7 +138,7 @@ node demo/build.mjs
 node demo/serve.mjs
 ```
 
-The **Deploy demo to GitHub Pages** workflow publishes `demo/dist` when started manually from the Actions tab.
+The included `.github/workflows/demo-pages.yml` was written for the standalone MVP repository. In this archive it is nested inside `arxatec-mvp/`, so GitHub Actions will not discover it at the repository root, and its paths would need to be adapted before publishing.
 
 </details>
 

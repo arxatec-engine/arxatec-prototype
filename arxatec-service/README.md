@@ -1,95 +1,101 @@
-# Arxatec Service - Developer Documentation
+<div align="center">
 
-## Description
+<img src="../arxatec-platform/src/assets/images/logo_icon.png" alt="Arxatec logo" width="110">
 
-Arxatec Service is the backend service that enables communication between the Arxatec platform and its database. It handles all business logic and manages connections with the PostgreSQL database.
+# ARXATEC SERVICE
 
-## Technologies Used
+**The historical backend for an early Arxatec platform.**
 
-- **Node.js** (version 21 or higher)
-- **Express** (framework for Node.js)
-- **TypeScript** (static typing for JavaScript)
-- **Docker** (optional, for containerization)
-- **Pkgroll** (bundler)
-- **Prisma ORM** (database mapping)
-- **Zod** (data validation)
-- **Axios** (HTTP client)
-- **TSX** (TypeScript execution without prior compilation)
-- **PostgreSQL** (relational database)
+![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933?logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-6-2D3748?logo=prisma&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white) ![Status](https://img.shields.io/badge/Status-Archived_prototype-8a8f98)
 
----
+[Repository overview](../README.md) · [The story](../README.md#-the-story) · [Frontend platform](../arxatec-platform/README.md)
 
-## Requirements
+</div>
 
-- Install **Node.js** version 21 or higher.
-- Install PostgreSQL if running locally.
-- Docker (optional, if using containerization).
+## 📖 The story
 
----
+This service is the backend preserved alongside the early [Arxatec platform](../arxatec-platform/README.md). It contains HTTP routes, business logic and a Prisma schema for an earlier stage of the product's development.
 
-## Installation and Setup for Development
+> [!IMPORTANT]
+> This service is archived and incomplete. It is not the current Arxatec backend and is not intended for production use.
 
-### 1. Clone the repository
+## ✨ What is in the prototype
 
-```sh
-git clone <REPOSITORY_URL>
-cd arxatec-service
+| Area | Examples in the source |
+| --- | --- |
+| 🔐 **Accounts** | Registration, login and password-reset routes. |
+| ⚖️ **Legal platform** | Lawyer and client routes, plus case models and code. |
+| 👥 **Community** | Community, article and notification routes. |
+| ✉️ **Integrations** | Email, forms, waitlist, chatbot, file storage and Socket.IO configuration. |
+| 📚 **API reference** | Swagger UI at `/api-docs` and a `/ping` route. |
+
+Most API routes are mounted under `/api/v1`. The cases route is commented out in [`src/routes.ts`](src/routes.ts), even though case code and database models are present. Other integrations require separate services or credentials and may be unfinished.
+
+## 🗂️ Project structure
+
+```text
+arxatec-service/
+├── docker-compose.yml       Local PostgreSQL and Redis services
+├── prisma/
+│   └── schema.prisma        Database models and connection configuration
+├── public/                 Public files and assets
+├── src/
+│   ├── config/             Environment, database, email, Redis and socket setup
+│   ├── docs/               Swagger configuration
+│   ├── infrastructure/     External storage and JWT helpers
+│   ├── middlewares/        Request and authentication middleware
+│   ├── modules/            Domain areas and feature implementations
+│   ├── utils/              Shared helpers
+│   ├── index.ts            HTTP server entry point
+│   └── routes.ts           Central API router
+├── .env.sample             Example environment variables
+└── package.json            Dependencies and scripts
 ```
 
-### 2. Create and configure the `.env` file
+Modules combine domain, data and presentation layers; some features, such as authentication, are also grouped into vertical slices. See [CONTRIBUTING.md](CONTRIBUTING.md) for the historical development conventions.
 
-In the project root, create a `.env` file with the following content:
+## 🚀 Running locally
+
+Use Node.js 22 or newer, npm and Docker with Compose. The commands below create a **local disposable database** using the included Compose file. They were checked with Node.js 24 and npm 11. The archived lockfile is incomplete for current npm, so this installation resolves the declared version ranges without modifying it:
+
+```bash
+git clone https://github.com/arxatec-engine/arxatec-prototype.git
+cd arxatec-prototype/arxatec-service
+npm install --no-package-lock
+cp -n .env.sample .env
+```
+
+Edit `.env` and set at least the following for the included local services:
 
 ```env
-DATABASE_URL="postgresql://arxatec:arxatec@localhost:5432/arxatecservice" # Database URL
-PORT="3000" # Server port
+DATABASE_URL_PROD="postgresql://arxatec:arxatec@localhost:5432/arxatecservice?schema=public"
+DIRECT_URL_PROD="postgresql://arxatec:arxatec@localhost:5432/arxatecservice?schema=public"
+REDIS_URL="redis://localhost:6379"
+PORT="3000"
+APP_URL="http://localhost:"
+SOCKET_URL="http://localhost:5173"
+JWT_SECRET="01234567890123456789012345678901"
 ```
 
-### 3. (Optional) Create a `Dockerfile`
+Despite their names, `DATABASE_URL_PROD` and `DIRECT_URL_PROD` are the variables currently read by the Prisma schema, including for a local database. The sample JWT value is for local development only; the service requires at least 32 ASCII characters. Email, Gemini and AWS S3 features need their own configuration; consult [`.env.sample`](.env.sample) and [`src/config/env/index.ts`](src/config/env/index.ts).
 
-If you want to use Docker for the database, create a `Dockerfile` in the project root with the following content:
-
-```dockerfile
-FROM postgres:16
-
-ENV POSTGRES_DB=arxatecservice
-ENV POSTGRES_USER=arxatec
-ENV POSTGRES_PASSWORD=arxatec
-
-EXPOSE 5432
-```
-
-### 4. Install dependencies
-
-```sh
-npm install
-```
-
-### 5. Run database migrations
-
-```sh
-npx prisma migrate dev --name init
-```
-
-### 6. Start the development server
-
-```sh
+```bash
+docker compose up -d db redis
+npx prisma db push
 npm run dev
 ```
 
----
+`prisma db push` synchronizes the schema and generates the Prisma client. No migration history is included in this archive: use a fresh local database, since schema synchronization can alter existing data. The Compose file uses ports `5432` and `6379` and names the database container `my_postgres`; ensure these are available.
 
-## Deployment to Production
+The service listens at [http://localhost:3000](http://localhost:3000). Check [http://localhost:3000/ping](http://localhost:3000/ping) for `pong` and open [http://localhost:3000/api-docs](http://localhost:3000/api-docs) for the historical Swagger UI.
 
-To deploy in production, follow the same installation steps, but instead of `npm run dev`, use:
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Run the service with the TypeScript watcher. |
+| `npm run build` | Bundle the service into `dist/`. |
+| `npm start` | Start a previously built service. |
+| `npx prisma validate` | Validate the Prisma schema and configured database URLs. |
 
-```sh
-npm run build
-npm start
-```
+## 👥 People
 
----
-
-## Contribution Guidelines
-
-For detailed development conventions, including commit messages and branch naming, please refer to the [`CONTRIBUTING.md`](CONTRIBUTING.md) file.
+The later Arxatec team included **Rafael Martín Aguirre Gonzalo** and **Yhefry Michael Gaspar Almonacid**, with substantial contributions from **Harvey Yerik Vasquez Huaranga** until June. **Yemis Paredez** built the preceding 2024 MVP. See the [repository overview](../README.md#-the-people) and Git history for the wider context and contributors.

@@ -1,115 +1,80 @@
-# Arxatec Website
+<div align="center">
 
-Arxatec is a modern, multilingual website built with Astro, featuring a clean and professional design. The site supports multiple languages and includes various sections such as blog, pricing, support, and legal pages.
+<img src="public/assets/icon_logo.png" alt="Arxatec logo" width="110">
 
-## 🌟 Features
+# ARXATEC WEBSITE
 
-- **Multilingual Support**: Available in multiple languages (English, Spanish, and more)
-- **Responsive Design**: Optimized for all devices
-- **Modern Architecture**: Built with Astro for optimal performance
-- **Comprehensive Sections**:
-  - Blog
-  - Pricing
-  - Support
-  - Privacy Policy
-  - Terms of Service
-  - 404 Error Page
+**An archived public website for the early Arxatec platform.**
 
-## 🏗️ Project Structure
+![Astro](https://img.shields.io/badge/Astro-5-BC52EE?logo=astro&logoColor=white) ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white) ![Languages](https://img.shields.io/badge/Languages-ES%20%7C%20EN%20%7C%20QU-3f3ab8) ![Status](https://img.shields.io/badge/Status-Archived_prototype-8a8f98)
 
+[Repository overview](../README.md) · [The story](../README.md#-the-story) · [Testing website](../arxatec-testing/README.md)
+
+</div>
+
+<br>
+
+![English home page of the archived Arxatec website](docs/screenshots/home.jpg)
+
+## 📖 The story
+
+This Astro project preserves a public-facing website from an early stage of Arxatec. It introduced the platform, its intended features and plans, and gave visitors access to blog and support pages. It sits alongside the [platform](../arxatec-platform/README.md) and [service](../arxatec-service/README.md) in this historical archive.
+
+> [!IMPORTANT]
+> This is an old website snapshot, not the current Arxatec website. Some content is sample content and links or integrations may no longer work.
+
+## ✨ What is in the prototype
+
+| Area | Pages and components |
+| --- | --- |
+| 🏠 **Home** | Product introduction, features, pricing, questions and blog sections. |
+| 📝 **Content** | Blog listing and sample article pages. |
+| 💬 **Support** | Support page and chatbot components. |
+| 📄 **Legal** | Privacy policy, terms and a 404 page. |
+| 🌐 **Languages** | Spanish, English and Quechua routes and translation files. |
+
+## 🗂️ Project structure
+
+```text
+arxatec-site/
+├── public/                 Static assets, branding and social images
+├── src/
+│   ├── components/
+│   │   ├── pages/          Page-specific sections
+│   │   └── shared/         Shared components, including the chatbot
+│   ├── i18n/               Language labels and translation helpers
+│   ├── layouts/            Shared Astro layout
+│   ├── pages/              Astro routes, including en/ and qu/
+│   ├── styles/             Global styles
+│   └── utils/              Shared helpers and asset references
+├── astro.config.mjs        Integrations, locales and Vercel adapter
+└── package.json            Dependencies and scripts
 ```
-src/
-├── components/     # Reusable UI components
-│   ├── pages/     # Page-specific components
-│   └── shared/    # Shared components across pages
-├── i18n/          # Internationalization files
-├── layouts/       # Layout templates
-├── pages/         # Main pages and routes
-│   ├── blog/      # Blog section
-│   ├── en/        # English pages
-│   ├── es/        # Spanish pages
-│   ├── pricing/   # Pricing information
-│   ├── privacy/   # Privacy policy
-│   ├── support/   # Support section
-│   └── terms/     # Terms of service
-├── styles/        # Global styles and CSS
-└── utils/         # Utility functions
-```
 
-## 🚀 Getting Started
+Spanish is the default locale and uses unprefixed routes such as `/` and `/pricing`. English uses `/en/` and Quechua uses `/qu/`. These are the routes configured in this snapshot; translated content and connected features may be incomplete.
 
-### Prerequisites
+## 🚀 Running locally
 
-- Node.js (v16 or higher)
-- npm (v7 or higher)
+Use Node.js 22 or newer and npm. The archived lockfile is incomplete for current npm, so the following installation resolves the declared version ranges without modifying it. It was checked with Node.js 24 and npm 11.
 
-### Installation
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Development
-
-To start the development server:
 ```bash
+git clone https://github.com/arxatec-engine/arxatec-prototype.git
+cd arxatec-prototype/arxatec-site
+npm install --no-package-lock
 npm run dev
 ```
-The site will be available at `localhost:4321`
 
-### Building for Production
+Open [http://localhost:4321](http://localhost:4321), or add `/en/` or `/qu/` to explore the other locales. Astro may choose another port if 4321 is already in use.
 
-To build the production version:
-```bash
-npm run build
-```
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the Astro development server. |
+| `npm run build` | Build the static site into `dist/`. |
+| `npm run preview` | Preview an existing local build. |
+| `npm run astro -- --help` | Show Astro CLI options. |
 
-To preview the production build:
-```bash
-npm run preview
-```
+The archived configuration includes the Vercel adapter and sitemap integration. A local preview does not require deploying the site, but features that call external services may need additional configuration.
 
-## 🛠️ Available Scripts
+## 👥 People
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 🌐 Internationalization
-
-The website uses a robust i18n system with:
-- Language-specific routes
-- UI translations in multiple languages
-- Automatic language detection
-- Easy-to-maintain translation files
-
-## 📝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support, please visit the [Support Section](https://arxatec.com/support) or contact our team.
-
----
-
-Built with ❤️ by the Arxatec Team
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The later Arxatec team included **Rafael Martín Aguirre Gonzalo** and **Yhefry Michael Gaspar Almonacid**, with substantial contributions from **Harvey Yerik Vasquez Huaranga** until June. **Yemis Paredez** built the preceding 2024 MVP. See the [repository overview](../README.md#-the-people) and Git history for the wider context and contributors.

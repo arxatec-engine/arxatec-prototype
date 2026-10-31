@@ -1,146 +1,42 @@
-  # Contributing to Arxatec Service
+# Historical development conventions
 
-  ## Development Conventions
+This guide records conventions used for the service in this repository. The code is an archived prototype; it does not describe the current Arxatec backend. See the [service README](README.md) for setup and known limitations.
 
-  ### Using Conventional Commits and Gitemoji
+## Commits and branches
 
-  To maintain a clear commit structure, follow the **Conventional Commits** standard along with **Gitemoji**.
+The project used [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) and [Gitmoji](https://gitmoji.dev/) to describe changes. For example:
 
-  **Example of a bad commit:**
+```text
+feat: ✨ add password reset
+fix: 🐛 handle an expired token
+```
 
-  ```sh
-  git commit -m "Added something"
-  ```
+Branch names used a category and a short kebab-case description, such as `feature/create-new-button-component`.
 
-  **Example of a good commit:**
+## Code organization
 
-  ```sh
-  git commit -m "feat: :sparkles: Added forgot password and dashboard page"
-  ```
+The service combines domain-oriented modules, layers and some feature-based slices. The archive does not use exactly the same layout everywhere:
 
-  More information:
+```text
+src/
+├── config/                Environment, database, email, Redis and socket setup
+├── docs/                  Swagger configuration
+├── infrastructure/        External storage and JWT helpers
+├── middlewares/           Authentication and request middleware
+├── modules/
+│   ├── article/           Example of data, domain and presentation layers
+│   ├── auth/features/     Example of feature-based authentication slices
+│   ├── case/              Case code; its routes are not currently mounted
+│   └── ...                Client, community, lawyer and other modules
+├── utils/                 Shared helpers
+├── index.ts               Server entry point
+└── routes.ts              Central API router
+```
 
-  - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-  - [Gitemoji](https://gitmoji.dev/)
+Many domain modules use `domain/` for DTOs and entities, `data/` for repositories or external APIs, and `presentation/` for controllers, services and routes. Authentication also groups related code under individual feature folders: `src/modules/auth/features/login/login_with_email/` is one example.
 
-  ### Branch Naming Convention
+When tracing an endpoint, follow its route to the controller and service, then to any repository or external API it uses. [`src/routes.ts`](src/routes.ts) determines which module routes are actually exposed. The case router is present in the source but commented out in that file.
 
-  Use the following structure for naming branches:
+## Naming
 
-  ```sh
-  git branch <category/reference/description-in-kebab-case>
-  ```
-
-  **Example:**
-
-  ```sh
-  git branch feature/create-new-button-component
-  ```
-
-  More information:
-
-  - [Git Branch and Commit Naming Conventions](https://dev.to/varbsan/a-simplified-convention-for-naming-branches-and-commits-in-git-il4)
-
-  ---
-
-  ## Project Architecture
-
-    ##ENDPOINT creation process
-
-  -1st the DTOs are created (format is established), 2nd the service is created (using the defined DTOs), 3rd the repository is created (Data Access, if CRUD is necessary), 4th the presentation (Controllers and Routes) where the controllers and the route are assigned (ENDPOINT)
-
-  Arxatec Service follows **Clean Architecture**, ensuring modularity and separation of concerns. Below is the structure:
-
-  ```
-  ├── .env
-  └── src
-        ├── index.ts
-        ├── prismaClient.ts
-        ├── routes.ts
-
-        ├── config/
-        │   ├── index.ts
-        │   ├── email/
-        │   │   └── index.ts
-        │   ├── external_services/
-        │   │   └── index.ts
-        │   ├── jwt/
-        │   │   └── index.ts
-
-        ├── constants/
-        │   ├── index.ts
-        │   ├── http_status_codes/
-        │   │   └── index.ts
-        │   ├── messages/
-        │   │   ├── index.ts
-        │   │   ├── auth/
-        │   │   │   └── index.ts
-        │   │   ├── bot/
-        │   │   │   └── index.ts
-        │   │   ├── waitlist/
-        │   │   │   └── index.ts
-
-        ├── docs/
-        │   └── swagger.ts
-
-        ├── middlewares/
-        │   ├── index.ts
-        │   ├── async_handler/
-        │   │   └── index.ts
-        │   ├── authenticate_token/
-        │   │   └── index.ts
-
-        ├── modules/
-        │   ├── [moduleName]/                # article, auth, bot, client, email, article, plan, waitlist
-        │   │   ├── data/
-        │   │   │   ├── repository/
-        │   │   │   │   └── [module].repository.ts
-        │   │   ├── domain/
-        │   │   │   ├── dtos/
-        │   │   │   │   └── [dto].ts
-        │   │   │   ├── entities/
-        │   │   │   │   └── [entity].ts
-        │   │   ├── presentation/
-        │   │   │   ├── controllers/
-        │   │   │   │   └── [module].controller.ts
-        │   │   │   ├── routes/
-        │   │   │   │   └── [module].routes.ts
-        │   │   │   ├── services/
-        │   │   │   │   └── [module].service.ts
-
-        ├── utils/
-        │   ├── index.ts
-        │   ├── build_http_response/
-        │   │   └── index.ts
-        │   ├── errors/
-        │   │   └── index.ts
-        │   ├── error_handler/
-        │   │   └── index.ts
-        │   ├── test_email/
-        │   │   └── index.ts
-
-  ```
-
-  ### Explanation:
-
-  - **`middlewares/`**: Contains middlewares like error handlers or authentication.
-  - **`modules/`**: Each module represents a domain entity.
-    - **`data/repository/`**: Manages database interactions via Prisma ORM.
-    - **`domain/`**: Defines the business logic.
-      - **`dtos/`**: Data Transfer Objects for input validation.
-      - **`entities/`**: Core business entities.
-    - **`presentation/`**: Handles API interactions.
-      - **`controllers/`**: Processes HTTP requests and invokes services.
-      - **`routes/`**: Defines HTTP routes for the module.
-    - **`services/`**: Implements business logic and interacts with repositories.
-  - **`index.ts`**: Main entry point of the backend.
-  - **`routes.ts`**: Aggregates and exports all defined routes.
-
-  ### Naming Conventions:
-
-  - Use **English** for all names.
-  - Folder names follow **lowerCamelCase** or **snake_case**.
-    - Example: `cases/`, `user_lawyer/`
-  - Controller files follow **dot notation**: `user.controller.ts`
-
-  By following these guidelines, we ensure a scalable and maintainable codebase. 🚀
+The historical convention was to use English names, descriptive folders and dot-separated roles in filenames, such as `user.controller.ts`. Existing directories contain both camel case and snake case; preserve the spelling already in use when navigating the archive.
