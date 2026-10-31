@@ -1,6 +1,6 @@
 export { default as logo } from "~/assets/images/logo.png";
 export { default as logoIcon } from "~/assets/images/logo_icon.png";
-export { default as bannerOnboardingGeneral } from "~/assets/images/onboarding/general.png";
+export { default as bannerOnboardingGeneral } from "~/assets/images/onboarding/general.webp";
 export { default as avatarError } from "~/assets/images/error/avatar_error.png";
 export { default as avatarLexor } from "~/assets/images/lexor_avatar.jpg";
 export const bannerLogin =
