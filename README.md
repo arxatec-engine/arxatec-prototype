@@ -73,6 +73,7 @@ Each project has its own README with its purpose, structure and local setup. The
 | 🌱 | **Yemis Paredez** | Designed and built the original 2024 MVP. |
 | ⚖️ | **Rafael Martín Aguirre Gonzalo** | Arxatec team member in the later stages of the project. |
 | ⚖️ | **Yhefry Michael Gaspar Almonacid** | Arxatec team member in the later stages of the project. |
+| 💻 | **Jhonny Sanes** | Contributed to backend development, including authentication, notifications and case management. |
 | 🤝 | **Harvey Yerik Vasquez Huaranga** | Helped build a substantial part of the later work until June, before moving on. |
 
 Other contributors are represented in the repository's Git history. The [MVP README](arxatec-mvp/README.md#-author) includes more about its author.
