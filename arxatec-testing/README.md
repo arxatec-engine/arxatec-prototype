@@ -1,39 +1,28 @@
-<div align="center">
-
-<img src="../arxatec-site/public/assets/icon_logo.png" alt="Arxatec logo" width="110">
-
 # ARXATEC TESTING
 
 **A separate experimental snapshot of the Arxatec website.**
 
-![Astro](https://img.shields.io/badge/Astro-5-BC52EE?logo=astro&logoColor=white) ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white) ![Languages](https://img.shields.io/badge/Languages-ES%20%7C%20EN%20%7C%20QU-3f3ab8) ![Status](https://img.shields.io/badge/Status-Archived_prototype-8a8f98)
+**Technologies:** Astro 5, React 19 and Tailwind CSS 3.
 
-[Repository overview](../README.md) · [The story](../README.md#-the-story) · [Public website snapshot](../arxatec-site/README.md)
+[Repository overview](../README.md) · [The story](../README.md#the-story) · [Public website snapshot](../arxatec-site/README.md)
 
-</div>
-
-<br>
-
-![English support page of the archived testing website](docs/screenshots/support.jpg)
-
-## 📖 The story
+## The story
 
 Despite its name, `arxatec-testing` is an Astro website project, not a test suite. It preserves a separate version of the public site, with its own pages, components and locale routing. Compare it with [arxatec-site](../arxatec-site/README.md) to explore the two website snapshots.
 
-> [!IMPORTANT]
-> This is an archived experiment, not the current Arxatec website. Content, external links and integrations may be incomplete or outdated.
+> **Important:** This is an archived experiment, not the current Arxatec website. Content, external links and integrations may be incomplete or outdated.
 
-## ✨ What is in the prototype
+## What is in the prototype
 
 | Area | Pages and components |
 | --- | --- |
-| 🏠 **Home** | Product, features, pricing and frequently asked questions. |
-| 📝 **Content** | Blog listing and sample articles. |
-| 💬 **Support** | Support page and chatbot components. |
-| 📄 **Legal** | Privacy policy, terms and a 404 page. |
-| 🌐 **Languages** | Spanish, English and Quechua, each with a route prefix. |
+| **Home** | Product, features, pricing and frequently asked questions. |
+| **Content** | Blog listing and sample articles. |
+| **Support** | Support page and chatbot components. |
+| **Legal** | Privacy policy, terms and a 404 page. |
+| **Languages** | Spanish, English and Quechua, each with a route prefix. |
 
-## 🗂️ Project structure
+## Project structure
 
 ```text
 arxatec-testing/
@@ -54,7 +43,7 @@ arxatec-testing/
 
 Unlike `arxatec-site`, this version configures a prefix for the default Spanish locale: `/es/`, `/en/` and `/qu/`. Its root page contains an attempted redirect to `/es/`, but the built root page can be blank; open a localized route directly.
 
-## 🚀 Running locally
+## Running locally
 
 Use Node.js 22 or newer and npm. The archived lockfile is incomplete for current npm, so the following installation resolves the declared version ranges without modifying it. It was checked with Node.js 24 and npm 11.
 
@@ -76,6 +65,6 @@ Open [http://localhost:4321/es/](http://localhost:4321/es/), or replace `es` wit
 
 This project does not define an automated test script in `package.json`. Its Vercel adapter and configuration are preserved for historical context.
 
-## 👥 People
+## People
 
-The later Arxatec team included **Rafael Martín Aguirre Gonzalo** and **Yhefry Michael Gaspar Almonacid**, with substantial contributions from **Harvey Yerik Vasquez Huaranga** until June. **Yemis Paredez** built the preceding 2024 MVP. See the [repository overview](../README.md#-the-people) and Git history for the wider context and contributors.
+The later Arxatec team included **Rafael Martín Aguirre Gonzalo** and **Yhefry Michael Gaspar Almonacid**, with substantial contributions from **Harvey Yerik Vasquez Huaranga** until June. **Yemis Paredez** built the preceding 2024 MVP. See the [repository overview](../README.md#the-people) and Git history for the wider context and contributors.

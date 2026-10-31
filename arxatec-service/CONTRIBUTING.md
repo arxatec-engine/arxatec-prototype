@@ -4,11 +4,11 @@ This guide records conventions used for the service in this repository. The code
 
 ## Commits and branches
 
-The project used [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) and [Gitmoji](https://gitmoji.dev/) to describe changes. For example:
+The project used [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to describe changes; some historical commits also used [Gitmoji](https://gitmoji.dev/). Examples of commit messages:
 
 ```text
-feat: ✨ add password reset
-fix: 🐛 handle an expired token
+feat: add password reset
+fix: handle an expired token
 ```
 
 Branch names used a category and a short kebab-case description, such as `feature/create-new-button-component`.

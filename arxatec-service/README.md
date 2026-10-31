@@ -1,37 +1,30 @@
-<div align="center">
-
-<img src="../arxatec-platform/src/assets/images/logo_icon.png" alt="Arxatec logo" width="110">
-
 # ARXATEC SERVICE
 
 **The historical backend for an early Arxatec platform.**
 
-![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933?logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-6-2D3748?logo=prisma&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white) ![Status](https://img.shields.io/badge/Status-Archived_prototype-8a8f98)
+**Technologies:** Node.js, Express 4, TypeScript 5, Prisma 6, PostgreSQL 16 and Redis.
 
-[Repository overview](../README.md) · [The story](../README.md#-the-story) · [Frontend platform](../arxatec-platform/README.md)
+[Repository overview](../README.md) · [The story](../README.md#the-story) · [Frontend platform](../arxatec-platform/README.md)
 
-</div>
-
-## 📖 The story
+## The story
 
 This service is the backend preserved alongside the early [Arxatec platform](../arxatec-platform/README.md). It contains HTTP routes, business logic and a Prisma schema for an earlier stage of the product's development.
 
-> [!IMPORTANT]
-> This service is archived and incomplete. It is not the current Arxatec backend and is not intended for production use.
+> **Important:** This service is archived and incomplete. It is not the current Arxatec backend and is not intended for production use.
 
-## ✨ What is in the prototype
+## What is in the prototype
 
 | Area | Examples in the source |
 | --- | --- |
-| 🔐 **Accounts** | Registration, login and password-reset routes. |
-| ⚖️ **Legal platform** | Lawyer and client routes, plus case models and code. |
-| 👥 **Community** | Community, article and notification routes. |
-| ✉️ **Integrations** | Email, forms, waitlist, chatbot, file storage and Socket.IO configuration. |
-| 📚 **API reference** | Swagger UI at `/api-docs` and a `/ping` route. |
+| **Accounts** | Registration, login and password-reset routes. |
+| **Legal platform** | Lawyer and client routes, plus case models and code. |
+| **Community** | Community, article and notification routes. |
+| **Integrations** | Email, forms, waitlist, chatbot, file storage and Socket.IO configuration. |
+| **API reference** | Swagger UI at `/api-docs` and a `/ping` route. |
 
 Most API routes are mounted under `/api/v1`. The cases route is commented out in [`src/routes.ts`](src/routes.ts), even though case code and database models are present. Other integrations require separate services or credentials and may be unfinished.
 
-## 🗂️ Project structure
+## Project structure
 
 ```text
 arxatec-service/
@@ -54,7 +47,7 @@ arxatec-service/
 
 Modules combine domain, data and presentation layers; some features, such as authentication, are also grouped into vertical slices. See [CONTRIBUTING.md](CONTRIBUTING.md) for the historical development conventions.
 
-## 🚀 Running locally
+## Running locally
 
 Use Node.js 22 or newer, npm and Docker with Compose. The commands below create a **local disposable database** using the included Compose file. They were checked with Node.js 24 and npm 11. The archived lockfile is incomplete for current npm, so this installation resolves the declared version ranges without modifying it:
 
@@ -96,6 +89,6 @@ The service listens at [http://localhost:3000](http://localhost:3000). Check [ht
 | `npm start` | Start a previously built service. |
 | `npx prisma validate` | Validate the Prisma schema and configured database URLs. |
 
-## 👥 People
+## People
 
-The later Arxatec team included **Rafael Martín Aguirre Gonzalo** and **Yhefry Michael Gaspar Almonacid**, with substantial contributions from **Harvey Yerik Vasquez Huaranga** until June. **Yemis Paredez** built the preceding 2024 MVP. See the [repository overview](../README.md#-the-people) and Git history for the wider context and contributors.
+The later Arxatec team included **Rafael Martín Aguirre Gonzalo** and **Yhefry Michael Gaspar Almonacid**, with substantial contributions from **Harvey Yerik Vasquez Huaranga** until June. **Yemis Paredez** built the preceding 2024 MVP. See the [repository overview](../README.md#the-people) and Git history for the wider context and contributors.
