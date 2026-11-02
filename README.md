@@ -2,7 +2,7 @@
 
 **A public archive of where Arxatec began and how the idea evolved.**
 
-[Explore the projects](#the-projects) · [Read the story](#the-story) · [Meet the team](#the-people) · [Run the original MVP demo](arxatec-mvp/README.md#browser-based-demo)
+[Explore the projects](#the-projects) · [Read the story](#the-story) · [Meet the team](#the-people) · [Run the original MVP demo](https://arxatec-engine.github.io/arxatec-prototype/)
 
 > **Important:** This repository preserves old, deprecated versions of Arxatec. It is a historical record, **not the current Arxatec platform** or a reference for its present-day architecture. Some features and integrations are incomplete; do not use these prototypes in production.
 
@@ -49,7 +49,7 @@ There was also a mobile app from that period, including a dashboard with earning
 | [**arxatec-site**](arxatec-site/README.md) | A multilingual public website | Astro, React, Tailwind CSS |
 | [**arxatec-testing**](arxatec-testing/README.md) | A separate experimental website snapshot | Astro, React, Tailwind CSS |
 
-Each project has its own README with its purpose, structure and local setup. The original MVP can also be explored through its [browser-based demo](arxatec-mvp/README.md#browser-based-demo), which can be built and served locally.
+Each project has its own README with its purpose, structure and local setup. Explore the original MVP through its [browser-based demo](https://arxatec-engine.github.io/arxatec-prototype/); the [MVP README](arxatec-mvp/README.md#browser-based-demo) also explains how to run it locally.
 
 ## The people
 

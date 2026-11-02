@@ -1,8 +1,11 @@
-name: Deploy demo to GitHub Pages
+name: Deploy MVP demo to GitHub Pages
 
-# Manual only: start it from the Actions tab once GitHub Pages is enabled
-# (Settings > Pages > Source: GitHub Actions).
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'arxatec-mvp/**'
+      - '.github/workflows/demo-pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -28,13 +31,13 @@ jobs:
           node-version: 22
 
       - name: Build demo
-        run: node demo/build.mjs
+        run: node arxatec-mvp/demo/build.mjs
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: demo/dist
+          path: arxatec-mvp/demo/dist
 
       - id: deployment
         uses: actions/deploy-pages@v4

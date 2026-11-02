@@ -23,7 +23,7 @@
   const STORE = 'arxatec-mvp-demo';
   const SESSION_KEY = STORE + ':session';
   const SEEN_KEY = STORE + ':seen';
-  const SOURCE_URL = 'https://github.com/arxatec-engine/arxatec-mvp';
+  const SOURCE_URL = 'https://github.com/arxatec-engine/arxatec-prototype/tree/main/arxatec-mvp';
   const AUTHOR_URL = 'https://linktr.ee/yemis_paredez';
   const PANEL_BY_ROLE = { admin: 'admin', cliente: 'customer', abogado: 'lawyer' };
   const DEMO_ACCOUNTS = [

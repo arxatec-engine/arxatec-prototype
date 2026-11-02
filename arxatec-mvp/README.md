@@ -23,7 +23,9 @@ Yemis Paredez designed and built this first version. Later came an institute pro
 
 ## Browser-based demo
 
-The demo's application logic runs in the browser, with no backend or shared database. A local static server delivers its files.
+The demo's application logic runs in the browser, with no backend or shared database. A static server delivers its files.
+
+**[Open the demo on GitHub Pages](https://arxatec-engine.github.io/arxatec-prototype/).**
 
 To build and serve it locally, use Node.js 20 or newer and run these commands from `arxatec-mvp/`:
 
@@ -32,7 +34,7 @@ node demo/build.mjs
 node demo/serve.mjs
 ```
 
-Open [http://localhost:8095](http://localhost:8095). The build recreates `demo/dist/`. The previously advertised GitHub Pages address returned 404 when checked, so use the local demo in this archive.
+Open [http://localhost:8095](http://localhost:8095). The build recreates `demo/dist/`.
 
 - **Same interface.** Every page is the HTML rendered by the original PHP app, with its own CSS, JavaScript and images.
 - **SQLite in the browser.** A small runtime replaces the PHP backend and runs the same queries on [sql.js](https://sql.js.org).
@@ -52,6 +54,7 @@ Open [http://localhost:8095](http://localhost:8095). The build recreates `demo/d
 - The client's status and history pages include sample consultations so they are not empty.
 - *Create plan* and the admin's *personal data* form save their changes; in the original app their handlers were never finished.
 - Forms that post to scripts missing from the original app, such as the support form, show a notice instead of an error page.
+- The original website's live chat is disabled in the demo.
 - The build reports one missing image referenced by the original public site: `web/img/model 2.png`.
 
 </details>
@@ -105,7 +108,7 @@ node demo/build.mjs
 node demo/serve.mjs
 ```
 
-The included `.github/workflows/demo-pages.yml` was written for the standalone MVP repository. In this archive it is nested inside `arxatec-mvp/`, so GitHub Actions will not discover it at the repository root, and its paths would need to be adapted before publishing.
+The repository's [GitHub Actions workflow](../.github/workflows/demo-pages.yml) builds and publishes the demo when MVP files change on `main`. It can also be run manually from the Actions tab.
 
 </details>
 

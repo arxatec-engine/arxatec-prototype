@@ -67,7 +67,10 @@ function transform(html, file) {
   const root = '../'.repeat(file.split('/').length - 1) || './';
   const runtime = `<script src="${root}_demo/demo.js" data-root="${root}" data-page="${page}"></script>`;
 
-  const rewritten = html.replace(
+  // The archived website's live-chat widget points to an external account.
+  // Keep the browser demo from connecting visitors to that real service.
+  const withoutLiveChat = html.replace(/<script\b[^>]*\bsrc=["'](?:https?:)?\/\/code\.tidio\.co\/[^"']+["'][^>]*>\s*<\/script>/gi, '');
+  const rewritten = withoutLiveChat.replace(
     /\b(href|action|src)=(["'])(.*?)\2/g,
     (match, attr, quote, url) => `${attr}=${quote}${rewriteUrl(url, page)}${quote}`,
   );
